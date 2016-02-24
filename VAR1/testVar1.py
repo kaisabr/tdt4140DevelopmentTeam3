@@ -1,6 +1,6 @@
 import unittest
 from lysITaketKode import taklys
-lys = [1,1,1,1,0,0,0,0]
+lys = [1,1,1,1,0,0,0,0] #Tester alle mulige kombinasjoner
 dor = [0,1,0,1,1,1,0,0]
 fart = [0,0,1,1,0,1,1,0]
 
