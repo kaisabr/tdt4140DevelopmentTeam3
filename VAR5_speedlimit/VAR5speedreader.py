@@ -9,8 +9,8 @@ class SpeedLimit():
              else:
                  return False
 
-    def drivingToFast(self, myspeed, fartsgrense):
-        if (myspeed <= (fartsgrense*constant)):
+    def drivingToFast(self, myspeed, speedLimit):
+        if (myspeed <= (speedLimit*constant)):
             return False
         else:
             return True
