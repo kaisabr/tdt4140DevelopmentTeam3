@@ -20,16 +20,16 @@ class MyTestCase(unittest.TestCase):
         self.assertTrue(SpeedLimit().drivingOK(speed_list_perfect, currentSpeedLimit), True)
 
     def test_DrivingToFast(self):
-         self.assertFalse(SpeedLimit().drivingToFast2(speed, currentSpeedLimit), "Driving to Fast")
+         self.assertFalse(SpeedLimit().drivingToFast(speed, currentSpeedLimit), "Driving to Fast")
 
     def test_OK(self):
-         self.assertFalse(SpeedLimit().drivingToFast2(speed, currentSpeedLimit))
+         self.assertFalse(SpeedLimit().drivingToFast(speed, currentSpeedLimit))
 
     def test_DrivingToFast2(self):
-         self.assertEquals(SpeedLimit().drivingToFast2(speed_to_fast, currentSpeedLimit), True, "You are driving to fast")
+         self.assertEquals(SpeedLimit().drivingToFast(speed_to_fast, currentSpeedLimit), True, "You are driving to fast")
 
     def test_OK2(self):
-         self.assertEquals(SpeedLimit().drivingToFast2(speed_OK, currentSpeedLimit), False, "You're driving is OK")
+         self.assertEquals(SpeedLimit().drivingToFast(speed_OK, currentSpeedLimit), False, "You're driving is OK")
 
 
 if __name__ == '__main__':
