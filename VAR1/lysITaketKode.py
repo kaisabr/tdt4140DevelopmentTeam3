@@ -5,5 +5,5 @@ def taklys(l, d, f): #tar inn en verdi for om lys er paa/av, dor aapen/lukket, b
     elif l==1: #om den gaar hit, vil enten dor vaere aapen og/eller bil ha fart
         return True
     else:
-        return False #lyset er av, skal ikke varsle om noe
+        return False #lyset er av, skal ikke varsle
 
