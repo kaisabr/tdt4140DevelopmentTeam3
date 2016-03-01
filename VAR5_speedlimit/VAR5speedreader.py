@@ -21,6 +21,8 @@ class SpeedLimit():
         else:
             return True
 
+    def sound(self):
+        print "Pip"
 
     with open("Speed.txt") as speedInput, open("SpeedLimit.txt") as speedLimitInput:
         for lineInSpeedInput, lineInSpeedLimitInput in izip(speedInput, speedLimitInput):
@@ -28,7 +30,5 @@ class SpeedLimit():
             y = lineInSpeedLimitInput.strip()
             print "{0}\t{1}".format(x, y)
 
-            if drivingOK(x, y):
-                print "OK"
             if drivingToFast(x, y):
-                print "Driving to Fast"
+                sound()
