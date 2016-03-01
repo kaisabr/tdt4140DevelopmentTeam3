@@ -15,7 +15,7 @@ def getSpeed():
 
 # Beregner optimal distanse
 def calculateOptimalDistance(speed):
-	return getSpeed()*3
+	return speed*3
 
 # Sjekker om bilen er paa
 def carIsOn():
@@ -25,7 +25,8 @@ def carIsOn():
 def siren():
 	while carIsOn:
 		time.sleep(1)
-		if (calculateOptimalDistance(getSpeed()) > getDistance()):
+		speed = getSpeed()
+		if (calculateOptimalDistance(speed) > getDistance()):
 			MakeSiren = True
 			return MakeSiren
 		else:
