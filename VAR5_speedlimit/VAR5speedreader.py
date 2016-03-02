@@ -32,7 +32,7 @@ class SpeedLimit():
     #     speedLimit = SpeedLimit().openFile(mySpeed, speedLimit)[1]
 
     def sound(self):
-        return "Pip"
+        return "Pip" and "hei"
 
 sp = SpeedLimit()
 print sp.openFile(speed, speedLimit)
