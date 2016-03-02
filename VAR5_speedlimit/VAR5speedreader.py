@@ -1,34 +1,38 @@
 from itertools import izip
 
 constant = 1.1
+#En fil med speedlimit
+speedLimit = 'SpeedLimit.txt'
+#en fil med current speed
+speed = 'Speed.txt'
 
 class SpeedLimit():
 
-    def drivingOK(self, mySpeed, speedLimit):
-        if mySpeed <= (speedLimit*constant):
-            return True
-        else:
-            return False
-        # for x in range(len(mySpeed)):
-        #     if mySpeed[x] <= (speedLimit*constant):
-        #         return True
-        #     else:
-        #         return False
+    def openFile(self, mySpeed, speedLimit):
+        with open(mySpeed, 'r') as speedInput, open(speedLimit, 'r') as speedLimitInput:
+            speedInputLine = speedInput.readlines()
+            speedLimitInputLine = speedLimitInput.readlines()
 
-    def drivingToFast(self, myspeed, speedLimit):
-        if (myspeed <= (speedLimit*constant)):
-            return False
-        else:
-            return True
+            for s, p in izip(range(len(speedInputLine)), range(len(speedLimitInputLine))):
+                if (speedInputLine[s] == '' or speedLimitInputLine[p] == ''):
+                    return None
+                else:
+                    x = int(speedInputLine[s].strip())
+                    y = int(speedLimitInputLine[p].strip())
+
+                    if x <= (y*constant):
+                        return True
+                    else:
+                        return False and self.sound()
+
+    # def drivingOK(self, mySpeed, speedLimit):
+    #     #file_opened = int(speedLimit().openFile(mySpeed, speedLimit)
+    #
+    #     speed = SpeedLimit().openFile(mySpeed, speedLimit)[0]
+    #     speedLimit = SpeedLimit().openFile(mySpeed, speedLimit)[1]
 
     def sound(self):
-        print "Pip"
+        return "Pip"
 
-    with open("Speed.txt") as speedInput, open("SpeedLimit.txt") as speedLimitInput:
-        for lineInSpeedInput, lineInSpeedLimitInput in izip(speedInput, speedLimitInput):
-            x = lineInSpeedInput.strip()
-            y = lineInSpeedLimitInput.strip()
-            print "{0}\t{1}".format(x, y)
-
-            if drivingToFast(x, y):
-                sound()
+sp = SpeedLimit()
+print sp.openFile(speed, speedLimit)

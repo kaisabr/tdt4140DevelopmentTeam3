@@ -1,37 +1,22 @@
 import unittest
 from VAR5speedreader import *
 
+#En fil med speedlimit
+speedLimit = 'SpeedLimit.txt'
+#en fil med current speed
+speed = 'Speed.txt'
 
-currentSpeedLimit = 80
-speed_to_fast = 90
-speed_OK = 60
-speed = 60
-speed_list_perfect = [30, 45, 69, 30, 72]
-speed_list_to_fast = [30, 45, 60, 80, 100]
 
 class MyTestCase(unittest.TestCase):
 
+
     # Testing if the code is giving you a message if you're driving to fast (over the speed limit)
-    def testToFast(self):
-        self.assertTrue(SpeedLimit().drivingOK(speed_list_to_fast, currentSpeedLimit), False)
-        # self.assertTrue(SpeedLimit().drivingOK(speed_to_fast, currentSpeedLimit), False)
+    def testDriving(self):
+        self.assertTrue(SpeedLimit().drivingOK(speed, speedLimit), False)
 
     # Testing if the code is giving you a message if you don't drive faster than the speed limit.
-    def testPerfectSpeed(self):
-        self.assertTrue(SpeedLimit().drivingOK(speed_list_perfect, currentSpeedLimit), True)
-        # self.assertTrue(SpeedLimit().drivingOK(speed_OK, currentSpeedLimit), True)
-
-    def test_DrivingToFast(self):
-        self.assertFalse(SpeedLimit().drivingToFast(speed, currentSpeedLimit), "Driving to Fast")
-
-    def test_OK(self):
-        self.assertFalse(SpeedLimit().drivingToFast(speed, currentSpeedLimit))
-
-    def test_DrivingToFast2(self):
-         self.assertEquals(SpeedLimit().drivingToFast(speed_to_fast, currentSpeedLimit), True, "You are driving to fast")
-
-    def test_OK2(self):
-         self.assertEquals(SpeedLimit().drivingToFast(speed_OK, currentSpeedLimit), False, "You're driving is OK")
+    def testOK(self):
+        self.assertTrue(SpeedLimit().drivingOK(self.readSpeed(speed), self.readSpeedLimit(speedLimit)), True)
 
 
 if __name__ == '__main__':
