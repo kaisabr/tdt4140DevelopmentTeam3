@@ -29,6 +29,5 @@ class SpeedLimit():
             x = lineInSpeedInput.strip()
             y = lineInSpeedLimitInput.strip()
             print "{0}\t{1}".format(x, y)
-
             if drivingToFast(x, y):
                 sound()
