@@ -8,7 +8,7 @@ dor = [0,1,0,1,1,1,0,0]
 fart1 = open('farter.txt','r') #aapner fil med hastigheter til bilen
 fart=[] #oppretter tom liste for aa legge inn 0 eller 1 ettersom bilen staar stille eller ikke
 
-for line in fart1: #legger inn 1 naar bilen har fart, og 0 naar bilen star stille
+for line in fart1: #legger inn 1 nar bilen har fart, og 0 naar bilen star stille
 
     if line.strip() != str(0):
         fart.append(1) #bil har fart
