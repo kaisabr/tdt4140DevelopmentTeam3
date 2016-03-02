@@ -12,11 +12,11 @@ class MyTestCase(unittest.TestCase):
 
     # Testing if the code is giving you a message if you're driving to fast (over the speed limit)
     def testDriving(self):
-        self.assertTrue(SpeedLimit().drivingOK(speed, speedLimit), False)
+        self.assertTrue(SpeedLimit().openFile(speed, speedLimit), False)
 
     # Testing if the code is giving you a message if you don't drive faster than the speed limit.
     def testOK(self):
-        self.assertTrue(SpeedLimit().drivingOK(self.readSpeed(speed), self.readSpeedLimit(speedLimit)), True)
+        self.assertTrue(SpeedLimit().openFile(speed, speedLimit), True)
 
 
 if __name__ == '__main__':
