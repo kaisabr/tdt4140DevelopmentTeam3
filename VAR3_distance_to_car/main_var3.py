@@ -1,7 +1,6 @@
 # Skrevet av Magnus og Aashild
 
 import random
-import time
 
 # Returnerer distanse til bilen foran. Foreloepig redundant metode.
 def getDistance():
