@@ -3,38 +3,31 @@ import lysITaketKode
 
 TL = lysITaketKode.interiorLight()
 
-lys = [1,1,1,1,0,0,0,0] #Tester alle mulige kombinasjoner
-dor = [0,1,0,1,1,1,0,0]
-fart1 = open('farter.txt','r') #aapner fil med hastigheter til bilen
-fart=[] #oppretter tom liste for aa legge inn 0 eller 1 ettersom bilen staar stille eller ikke
+lights = [1,1,1,1,0,0,0,0] #Test all possible combinations
+door = [0,1,0,1,1,1,0,0]
+f = 'farter.txt' #example file with different speeds
+speed = TL.getSpeeds(f) #useing the general method in the primary code to generate an array with only zeros and ones
 
-for line in fart1: #legger inn 1 nar bilen har fart, og 0 naar bilen star stille
-
-    if line.strip() != str(0):
-        fart.append(1) #bil har fart
-    else:
-        fart.append(0) #bil har ikke fart
-
-class TestUM(unittest.TestCase):#gir ut true dersom den skal pipe, false om den ikke skal pipe
+class TestUM(unittest.TestCase):#give true if system should 'pip', if not, false
 
     def setUp(self):
         pass
     def test1(self):
-        self.assertEqual(TL.taklys(lys[0],dor[0],fart[0]), False) #lys paa, dor lukket, bil stille
+        self.assertEqual(TL.taklys(lights[0],door[0],speed[0]), False) #light on, door closed, 0 speed
     def test2(self):
-        self.assertEqual(TL.taklys(lys[1],dor[1],fart[1]), True) #lys paa, dor aapen, bil stille
+        self.assertEqual(TL.taklys(lights[1],door[1],speed[1]), True) #light on, door open, 0 speed
     def test3(self):
-        self.assertEqual(TL.taklys(lys[2],dor[2],fart[2]), True) #lys paa, dor lukket, bil fart
+        self.assertEqual(TL.taklys(lights[2],door[2],speed[2]), True) #light on, door closed, car with speed
     def test4(self):
-        self.assertEqual(TL.taklys(lys[3],dor[3],fart[3]), True) #lys paa, dor aapen, bil fart
+        self.assertEqual(TL.taklys(lights[3],door[3],speed[3]), True) #light on, door open, car with speed
     def test5(self): #lys av, dor aapen, bil stille
-        self.assertEqual(TL.taklys(lys[4],dor[4],fart[4]), False) #lys av, dor aapen, bil stille
+        self.assertEqual(TL.taklys(lights[4],door[4],speed[4]), False) #light off, door open, 0 speed
     def test6(self):
-        self.assertEqual(TL.taklys(lys[5],dor[5],fart[5]), False) #lys av, dor aapen, bil fart
+        self.assertEqual(TL.taklys(lights[5],door[5],speed[5]), False) #light off, door open, car with speed
     def test7(self):
-        self.assertEqual(TL.taklys([6],dor[6],fart[6]), False) #lys av, dor lukket, bil fart
+        self.assertEqual(TL.taklys(lights[6],door[6],speed[6]), False) #light off, door closed, car with speed
     def test8(self):
-        self.assertEqual(TL.taklys(lys[7],dor[7],fart[7]), False) #lys av, dor lukket, bil stille
+        self.assertEqual(TL.taklys(lights[7],door[7],speed[7]), False) #light off, door closed, 0 speed
 
 
 if __name__=='__main__':
