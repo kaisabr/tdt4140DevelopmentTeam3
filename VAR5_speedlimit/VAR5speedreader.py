@@ -10,23 +10,37 @@ class SpeedLimit():
 
     def openFile(self, mySpeed, speedLimit):
         with open(mySpeed, 'r') as speedInput, open(speedLimit, 'r') as speedLimitInput:
-            # speedInputLine = [next(speedInput) for x in xrange(SpeedLimit().countLines(mySpeed))]
-            # speedLimitInputLine = [next(speedLimitInput) for y in xrange(SpeedLimit().countLines(speedLimit))]
-            speedInputLine = speedInput.readlines()
-            speedLimitInputLine = speedLimitInput.readlines()
+            # speedInputLine = speedInput.readlines()
+            # speedLimitInputLine = speedLimitInput.readlines()
 
-            for s, p in izip(xrange(len(speedInputLine)), xrange(len(speedLimitInputLine))):
-                if (speedInputLine[s] == '' or speedLimitInputLine[p] == ''):
-                # if (speedInputLine == '' or speedLimitInputLine == ''):
+            for speedLine, speedLimitLine in izip(speedInput, speedLimitInput):
+                print speedLine, speedLimitLine
+                if (speedLine == '' or speedLimitLine == ''):
                     return None
                 else:
-                    x = int(speedInputLine[s].strip())
-                    y = int(speedLimitInputLine[p].strip())
+                     x = int(speedLine.strip())
+                     y = int(speedLimitLine.strip())
 
-                    if x <= (y*constant):
-                        return True
-                    else:
-                        return False and self.sound()
+                     print x, y
+
+                     if x <= (y*constant):
+                         return True
+                     else:
+                         return False and self.sound()
+        speedInput.close()
+        speedLimitInput.close()
+
+            # for s, p in izip(xrange(len(speedInputLine)), xrange(len(speedLimitInputLine))):
+            #     if (speedInputLine[s] == '' or speedLimitInputLine[p] == ''):
+            #         return None
+            #     else:
+            #         x = int(speedInputLine[s].strip())
+            #         y = int(speedLimitInputLine[p].strip())
+            #
+            #         if x <= (y*constant):
+            #             return True
+            #         else:
+            #             return False and self.sound()
 
     # def drivingOK(self, mySpeed, speedLimit):
     #     #file_opened = int(speedLimit().openFile(mySpeed, speedLimit)
@@ -36,12 +50,6 @@ class SpeedLimit():
 
     def sound(self):
         return "Pip" and "hei"
-
-    def countLines(self, file):
-        with open(file) as f:
-            for i, l in enumerate(f):
-                pass
-        return i + 1
 
 
 sp = SpeedLimit()
