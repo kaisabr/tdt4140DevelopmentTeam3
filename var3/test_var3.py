@@ -20,7 +20,9 @@ class MyTest(unittest.TestCase):
     def test5(self):
         if main_var3.getDistance() < main_var3.calculateOptimalDistance(main_var3.getSpeed()):
             self.assertTrue(MakeSiren)
-
+    def test6(self):
+        if main_var3.getDistance() > main_var3.calculateOptimalDistance(main_var3.getSpeed()):
+            self.assertFalse(MakeSiren)
 
 if __name__ == '__main__':
     unittest.main()

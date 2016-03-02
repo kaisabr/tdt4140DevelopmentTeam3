@@ -3,8 +3,6 @@
 import random
 import time
 
-
-
 # Returnerer distanse til bilen foran
 def getDistance():
 	return random.randrange(5, 20)
