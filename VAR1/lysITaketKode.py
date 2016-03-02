@@ -1,14 +1,15 @@
 #class for interior light
 
 class interiorLight:
+    #Method returns the speeds in 0s and 1s
     def getSpeeds(self,speed_file):
         speed1 = open(speed_file,'r')
         speed=[]
-        for line in speed1: #legger inn 1 nar bilen har fart, og 0 naar bilen star stille
+        for line in speed1: #puts 1 in array when car has speed, 0 if not
             if line.strip() != str(0):
-                speed.append(1) #bil har fart
+                speed.append(1) #car has speed
             else:
-                speed.append(0) #bil har ikke fart
+                speed.append(0) #car is standing still
         return speed
     #the method returns flase if everything is OK (no notifications), if not, it returns flase
     def taklys(self,l, d, s): #take in value for light, door and speed (1 or 0)
