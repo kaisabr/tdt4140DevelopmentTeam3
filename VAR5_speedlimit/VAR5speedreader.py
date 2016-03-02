@@ -14,19 +14,20 @@ class SpeedLimit():
             # speedLimitInputLine = speedLimitInput.readlines()
 
             for speedLine, speedLimitLine in izip(speedInput, speedLimitInput):
-                print speedLine, speedLimitLine
+                speedLine, speedLimitLine = int(speedLine.split("\t")[0]), int(speedLimitLine.split("\t")[0])
+
                 if (speedLine == '' or speedLimitLine == ''):
                     return None
                 else:
-                     x = int(speedLine.strip())
-                     y = int(speedLimitLine.strip())
+                    x = speedLine
+                    y = speedLimitLine
 
-                     print x, y
+                    if x <= (y*constant):
+                        print True
+                    else:
+                        print False #and self.sound()
 
-                     if x <= (y*constant):
-                         return True
-                     else:
-                         return False and self.sound()
+
         speedInput.close()
         speedLimitInput.close()
 
