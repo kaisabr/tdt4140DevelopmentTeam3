@@ -5,24 +5,15 @@ import unittest
 import main_var3
 
 
-MakeSiren = True
-
-
 class MyTest(unittest.TestCase):
     def test1(self):
-        self.assertTrue(main_var3.getDistance() > 0)
+        self.assertTrue(main_var3.calculateOptimalDistance(10) > 0)
     def test2(self):
-        self.assertTrue(main_var3.getSpeed() > 0)
-    def test3(self):
-        self.assertTrue(main_var3.calculateOptimalDistance(main_var3.getSpeed()) > 0)
-    def test4(self):
         self.assertEqual(main_var3.calculateOptimalDistance(30), 90)
-    def test5(self):
-        if main_var3.getDistance() < main_var3.calculateOptimalDistance(main_var3.getSpeed()):
-            self.assertTrue(MakeSiren)
-    def test6(self):
-        if main_var3.getDistance() > main_var3.calculateOptimalDistance(main_var3.getSpeed()):
-            self.assertFalse(MakeSiren)
+    def test3(self):
+        self.assertTrue(main_var3.siren(True, 20, 50))
+    def test4(self):
+        self.assertFalse(main_var3.siren(True, 20, 70))
 
 if __name__ == '__main__':
     unittest.main()
