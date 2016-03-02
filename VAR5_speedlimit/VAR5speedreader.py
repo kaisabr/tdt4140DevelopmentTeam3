@@ -23,9 +23,9 @@ class SpeedLimit():
                     y = speedLimitLine
 
                     if x <= (y*constant):
-                        print True
+                        return True
                     else:
-                        print False #and self.sound()
+                        return False, self.sound()
 
 
         speedInput.close()
@@ -50,7 +50,7 @@ class SpeedLimit():
     #     speedLimit = SpeedLimit().openFile(mySpeed, speedLimit)[1]
 
     def sound(self):
-        return "Pip" and "hei"
+        return "Pip"
 
 
 sp = SpeedLimit()
