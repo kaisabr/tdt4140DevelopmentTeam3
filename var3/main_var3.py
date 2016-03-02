@@ -23,8 +23,7 @@ def carIsOn():
 
 # Sirenen varsler dersom avstanden til bilen foran er for liten
 def siren():
-	while carIsOn:
-		time.sleep(1)
+	while carIsOn():
 		speed = getSpeed()
 		if (calculateOptimalDistance(speed) > getDistance()):
 			MakeSiren = True
