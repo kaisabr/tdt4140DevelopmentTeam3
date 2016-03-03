@@ -1,22 +1,25 @@
 import unittest
 from VAR5speedreader import *
 
-#En fil med speedlimit
+# File with speed limits
 speedLimit = 'SpeedLimit.txt'
-#en fil med current speed
+
+# file with speed OK
 speed = 'Speed.txt'
+
+# file with speed (to fast)
+speedToFast = 'SpeedToFast.txt'
 
 
 class MyTestCase(unittest.TestCase):
 
-
     # Testing if the code is giving you a message if you're driving to fast (over the speed limit)
     def testDriving(self):
-        self.assertTrue(SpeedLimit().openFile(speed, speedLimit), False)
+        self.assertEqual(SpeedLimit().openFile(speedToFast, speedLimit), False)
 
     # Testing if the code is giving you a message if you don't drive faster than the speed limit.
     def testOK(self):
-        self.assertTrue(SpeedLimit().openFile(speed, speedLimit), True)
+        self.assertEqual(SpeedLimit().openFile(speed, speedLimit), True)
 
 
 if __name__ == '__main__':

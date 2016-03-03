@@ -1,57 +1,37 @@
 from itertools import izip
 
 constant = 1.1
-#En fil med speedlimit
-speedLimit = 'SpeedLimit.txt'
-#en fil med current speed
-speed = 'Speed.txt'
 
 class SpeedLimit():
 
+    # Open file
     def openFile(self, mySpeed, speedLimit):
         with open(mySpeed, 'r') as speedInput, open(speedLimit, 'r') as speedLimitInput:
-            # speedInputLine = speedInput.readlines()
-            # speedLimitInputLine = speedLimitInput.readlines()
-
+            # Iterating over the two files, one for speed and one for speed limit
             for speedLine, speedLimitLine in izip(speedInput, speedLimitInput):
+                # converting to int
                 speedLine, speedLimitLine = int(speedLine.split("\t")[0]), int(speedLimitLine.split("\t")[0])
 
+                # Check if there is no empty line
                 if (speedLine == '' or speedLimitLine == ''):
                     return None
                 else:
                     x = speedLine
                     y = speedLimitLine
 
+                    # checking speed
                     if x <= (y*constant):
-                        print True
+                        return True
                     else:
-                        print False #and self.sound()
-
-
+                        self.sound()
+                        return False
+        # closing files
         speedInput.close()
         speedLimitInput.close()
 
-            # for s, p in izip(xrange(len(speedInputLine)), xrange(len(speedLimitInputLine))):
-            #     if (speedInputLine[s] == '' or speedLimitInputLine[p] == ''):
-            #         return None
-            #     else:
-            #         x = int(speedInputLine[s].strip())
-            #         y = int(speedLimitInputLine[p].strip())
-            #
-            #         if x <= (y*constant):
-            #             return True
-            #         else:
-            #             return False and self.sound()
-
-    # def drivingOK(self, mySpeed, speedLimit):
-    #     #file_opened = int(speedLimit().openFile(mySpeed, speedLimit)
-    #
-    #     speed = SpeedLimit().openFile(mySpeed, speedLimit)[0]
-    #     speedLimit = SpeedLimit().openFile(mySpeed, speedLimit)[1]
-
+    # warning sound
     def sound(self):
-        return "Pip" and "hei"
+        return "Pip"
 
-
-sp = SpeedLimit()
-print sp.openFile(speed, speedLimit)
+# sp = SpeedLimit()
+# print sp.openFile(speed, speedLimit)
