@@ -1,30 +1,32 @@
 # Skrevet av Magnus og Aashild
 
 import random
-import time
 
-# Returnerer distanse til bilen foran. Foreloepig redundant metode.
-def getDistance():
-	return random.randrange(5, 20)
+class distanceToCar():
 
-# Returnerer fart i meter per sekund. Foreloepig redundant metode.
-def getSpeed():
-	return random.randrange(0,30)
 
-# Beregner optimal distanse.
-def calculateOptimalDistance(speed):
-	return speed*3
+	# Returnerer distanse til bilen foran. Foreloepig redundant metode.
+	def getDistance(self):
+		return random.randrange(5, 20)
 
-# Sjekker om bilen er paa. Foreloepig redundant metode.
-def carIsOn():
-	return True
+	# Returnerer fart i meter per sekund. Foreloepig redundant metode.
+	def getSpeed(self):
+		return random.randrange(0,30)
 
-# Sirenen varsler dersom avstanden til bilen foran er for liten
-def siren(carIsOn, speed, distance):
-	while carIsOn:
-		if (calculateOptimalDistance(speed) > distance):
-			MakeSiren = True
-			return MakeSiren
-		else:
-			MakeSiren = False
-			return MakeSiren
+	# Beregner optimal distanse.
+	def calculateOptimalDistance(self,speed):
+		return speed*3
+
+	# Sjekker om bilen er paa. Foreloepig redundant metode.
+	def carIsOn(self):
+		return True
+
+	# Sirenen varsler dersom avstanden til bilen foran er for liten
+	def siren(self,carIsOn, speed, distance):
+		while carIsOn:
+			if (self.calculateOptimalDistance(speed) > distance):
+				MakeSiren = True
+				return MakeSiren
+			else:
+				MakeSiren = False
+				return MakeSiren
