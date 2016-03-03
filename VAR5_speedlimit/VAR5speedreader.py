@@ -4,31 +4,34 @@ constant = 1.1
 
 class SpeedLimit():
 
-    def drivingOK(self, mySpeed, speedLimit):
-        if mySpeed <= (speedLimit*constant):
-            return True
-        else:
-            return False
-        # for x in range(len(mySpeed)):
-        #     if mySpeed[x] <= (speedLimit*constant):
-        #         return True
-        #     else:
-        #         return False
+    # Open file
+    def openFile(self, mySpeed, speedLimit):
+        with open(mySpeed, 'r') as speedInput, open(speedLimit, 'r') as speedLimitInput:
+            # Iterating over the two files, one for speed and one for speed limit
+            for speedLine, speedLimitLine in izip(speedInput, speedLimitInput):
+                # converting to int
+                speedLine, speedLimitLine = int(speedLine.split("\t")[0]), int(speedLimitLine.split("\t")[0])
 
-    def drivingToFast(self, myspeed, speedLimit):
-        if (myspeed <= (speedLimit*constant)):
-            return False
-        else:
-            return True
+                # Check if there is no empty line
+                if (speedLine == '' or speedLimitLine == ''):
+                    return None
+                else:
+                    x = speedLine
+                    y = speedLimitLine
 
+                    # checking speed
+                    if x <= (y*constant):
+                        return True
+                    else:
+                        self.sound()
+                        return False
+        # closing files
+        speedInput.close()
+        speedLimitInput.close()
+
+    # warning sound
     def sound(self):
-        print "Pip"
+        return "Pip"
 
-    with open("Speed.txt") as speedInput, open("SpeedLimit.txt") as speedLimitInput:
-        for lineInSpeedInput, lineInSpeedLimitInput in izip(speedInput, speedLimitInput):
-            x = lineInSpeedInput.strip()
-            y = lineInSpeedLimitInput.strip()
-            print "{0}\t{1}".format(x, y)
-
-            if drivingToFast(x, y):
-                sound()
+# sp = SpeedLimit()
+# print sp.openFile(speed, speedLimit)
