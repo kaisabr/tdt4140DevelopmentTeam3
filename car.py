@@ -1,6 +1,6 @@
 def getSpeed(speeds):
-    f = speeds
-    return f.readline()
+    for line in speeds:
+        return speeds.readline()
 
 def isInteriorLightOn():
     pass
