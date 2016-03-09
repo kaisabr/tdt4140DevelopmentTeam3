@@ -11,7 +11,7 @@ class distanceToCar():
 		return speed*3
 
 	# Sirenen varsler dersom avstanden til bilen foran er for liten
-	def siren(self):
+	def calculateIfTooCloseToCar(self):
 		speed = carInput.getSpeed()
 		distance = carInput.distanceToCarAhead()
 		carIsOn = carInput.carIsOn()
