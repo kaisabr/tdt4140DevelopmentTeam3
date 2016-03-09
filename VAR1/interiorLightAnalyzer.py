@@ -1,6 +1,6 @@
 #class for interior light
 
-class interior_light:
+class interiorLightAnalyzer:
     #Method returns the speeds in 0s and 1s
     def get_speeds(self,speed_file):
         speed1 = open(speed_file,'r')
@@ -13,7 +13,7 @@ class interior_light:
         return speed
         
     #the method returns flase if everything is OK (no notifications), if not, it returns false
-    def interior_light_check(self,l, d, s): #take in value for light, door and speed (1 or 0)
+    def interiorLightCheck(self,l, d, s): #take in value for light, door and speed (1 or 0)
     #siren =  Siren.siren(boolean), i følge UML-diagrammet har sirene-klassen en boolsk sirene-metode
         if l == 1 and d == 0 and s == 0: #the only time it is ok for the light to be on
             return False

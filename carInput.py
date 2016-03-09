@@ -1,13 +1,8 @@
 class carInput():
-    
-    def getSpeed(self, speedFile):
-        speeds = open(speedFile, 'r')
+
+    def currentSpeed(self, speeds):
         for line in speeds: # For hver linje i inputfilen (som inneholder en fart per linje)
-            speed = int(line.strip())
-            if speed < 0:
-                pass
-            else:
-                return speed # returnerer en int med farten (som endrer seg kontinuerlig).
+            return speeds.readline() # returnerer en int med farten (som endrer seg kontinuerlig).
 
     def isInteriorLightOn(self):
         pass
@@ -15,5 +10,8 @@ class carInput():
     def distanceToCar(self):
         pass
 
-def openFile(file):
-    pass
+    def carIsOn(self):
+        pass
+
+
+
