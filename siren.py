@@ -1,10 +1,11 @@
 
-def triggerByInteriorLight():
-    pass
+class siren():
+    def triggerByInteriorLight(self):
+        pass
 
-def triggerByDistanceToCar():
-    pass
+    def triggerByDistanceToCar(self):
+        return "Distance to car in front is too small."
 
-def triggerByDistanceToCar():
-    pass
+    def triggerByDistanceToCar(self):
+        pass
 
