@@ -1,6 +1,5 @@
 class carInput():
-
-
+    
     def getSpeed(self, speedFile):
         speeds = open(speedFile, 'r')
         for line in speeds: # For hver linje i inputfilen (som inneholder en fart per linje)
