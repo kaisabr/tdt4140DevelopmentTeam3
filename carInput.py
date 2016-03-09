@@ -10,3 +10,7 @@ class carInput():
     def distanceToCar(self):
         pass
 
+    def carIsOn(self):
+        pass
+
+
