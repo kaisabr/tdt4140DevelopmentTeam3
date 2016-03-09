@@ -1,4 +1,3 @@
-
 class siren():
     def triggerByInteriorLight(self):
         pass
