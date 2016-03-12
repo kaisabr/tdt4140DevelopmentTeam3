@@ -25,27 +25,11 @@ class carInput():
     def carIsOn(self):
         pass
 
-    #Returns distance to object to the left side of the car. Method returns distance in meters. Written by Katharina and Magnus.
-    def distanceToLeftSide(self):
-        pass
-
-    #Returns distance to object to the right side of the car. Method returns distance in meters. Written by Katharina and Magnus.
-    def distanceToRightSide(self):
-        pass
-
-    #Returns whether left indicator light is on. Method returns answer in boolean. Written by Katharina and Magnus.
-    def leftIndicatorLightIsOn(self):
-        pass
-
-    #Returns whether right indicator light is on. Method returns answer in boolean. Written by Katharina and Magnus.
-    def rightIndicatorLightIsOn(self):
-        pass
-
     #Should check if switch for indicator light is activated
     def IndicatorLightSwitchedOn(self):
         pass
 
-#Should check if brakes are used
+    #Should check if brakes are used
     def brakePushed(self):
         pass
 
