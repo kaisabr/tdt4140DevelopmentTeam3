@@ -16,7 +16,7 @@ class distanceToCar():
 		distance = carInput.distanceToCarAhead()
 		carIsOn = carInput.carIsOn()
 		while carIsOn:
-			if (self.calculateOptimalDistance(speed) > distance):
+			if (self.calculateOptimalDistance() > distance):
 				siren.triggerByDistanceToCar()
 			else:
 				continue

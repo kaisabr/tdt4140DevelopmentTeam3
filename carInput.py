@@ -14,8 +14,6 @@ class carInput():
     def isInteriorLightOn(a):
         pass
 
-
-
     print isInteriorLightOn(1)
 
 
