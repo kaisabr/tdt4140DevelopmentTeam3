@@ -11,8 +11,13 @@ class carInput():
             else:
                 return speed
 
-    def isInteriorLightOn(self):
+    def isInteriorLightOn(a):
         pass
+
+
+
+    print isInteriorLightOn(1)
+
 
     def distanceToCar(self):
         pass
