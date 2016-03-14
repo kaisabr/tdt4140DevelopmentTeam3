@@ -30,6 +30,3 @@ class interiorLightAnalyzer:
             else:
                 return False #the light is off, no notification necessary
                 #siren = Siren.siren(False)
-            
-    
-
