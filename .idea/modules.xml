@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../KTN-prosjekt/KTN-prosjekt/.idea/KTN-prosjekt.iml" filepath="$PROJECT_DIR$/../KTN-prosjekt/KTN-prosjekt/.idea/KTN-prosjekt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../KTN-prosjekt/.idea/KTN-prosjekt.iml" filepath="$PROJECT_DIR$/../KTN-prosjekt/.idea/KTN-prosjekt.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/tdt4140DevelopmentTeam3.iml" filepath="$PROJECT_DIR$/.idea/tdt4140DevelopmentTeam3.iml" />
     </modules>
   </component>
