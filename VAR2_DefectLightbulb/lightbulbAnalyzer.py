@@ -21,6 +21,8 @@ class lightBulbAnalyzer:
         if defectLP == True and carInput.carIsOn(self):
             return "Licence plate ligth is not on. Make sure it is working"
 
+#Checks if it gets input from indicator light sensor when switch for indicator light is activated.
+#If no response is given after 5 seconds, a warning message is given
     def isIndicatorLightOff(self, indicatorLightSensor):
         off = 0
         on = 0
@@ -33,6 +35,7 @@ class lightBulbAnalyzer:
             if off == 5:
                 return "Please check your indicator light. No input to light sensor for 5 seconds"
 
+#Checks if brake light is on when car is on and brakes and brakes are pushed. Warning message given if it is not.
     def isBrakeLightOn(self, brakeLightSensor):
         if carInput.carIsOn(self) and carInput.brakePushed(self):
             if carInput.isLightOff(self, brakeLightSensor):
