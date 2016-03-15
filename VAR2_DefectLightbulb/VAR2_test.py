@@ -10,6 +10,7 @@ indicatorSwitchedOn = 1 # The indicator light is witched on
 
 class MyTestCase(unittest.TestCase):
 
+    # checking if the methods in lightbulbAnalyzer gives a message if the light is off
     def testIsLightOff(self):
         # check if you get a warning if front light is off
         self.assertEqual(lightBulbAnalyzer().isFrontLightOff(lightSignalOff, carSignalOn), "Front ligth is not on. Make sure it is working")

@@ -45,4 +45,5 @@ class carInput():
     def isLightOff(self, sensorInput):
         if sensorInput == 0:
             return True
-        return False
+        else:
+            return False

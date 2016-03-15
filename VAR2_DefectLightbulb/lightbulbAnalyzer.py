@@ -27,17 +27,16 @@ class lightBulbAnalyzer:
         off = 0
         on = 0
         if carInput().carIsOn(carSignal) and carInput().indicatorLightSwitchedOn(switchedOn):
-            for x in range(0,4):
+            for x in range(0, 5):
                 if carInput().isLightOff(indicatorLightSensor) == True:
                     off += 1
                 else:
                     on += 1
-        if off == 5:
-            return "Please check your indicator light. No input to light sensor for 5 seconds"
+            if off == 5:
+                return "Please check your indicator light. No input to light sensor for 5 seconds"
 
 # Checks if brake light is on when car is on and brakes and brakes are pushed. Warning message given if it is not.
     def isBrakeLightOn(self, carSignal, brakeSignal, lightSensor):
         if carInput().carIsOn(carSignal) and carInput().brakePushed(brakeSignal):
             if carInput().isLightOff(lightSensor):
                 return "Brake light is not on. Make sure it is working"
-
