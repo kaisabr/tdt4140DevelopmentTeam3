@@ -9,8 +9,6 @@ class carInput():
         textFromInteriorLightFile = file2.read()
         self.interiorLightStatus = textFromInteriorLightFile.split('\n')
 
-
-
     def getCurrentSpeed(self):
         while len(self.speeds) != 0:
             return self.speeds.pop(0)
@@ -29,6 +27,22 @@ class carInput():
 
     # print isInteriorLightOn(1)
 
+
+    #Returns distance to object to the left side of the car. Method returns distance in meters. Used by VAR4. Written by Katharina and Magnus.
+    def distanceToLeftSide(self):
+        pass
+
+    #Returns distance to object to the right side of the car. Method returns distance in meters. Used by VAR4. Written by Katharina and Magnus.
+    def distanceToRightSide(self):
+        pass
+
+    #Returns whether left indicator light is on. Method returns answer in boolean. Used by VAR4. Written by Katharina and Magnus.
+    def leftIndicatorLightIsOn(self):
+        pass
+
+    #Returns whether right indicator light is on. Method returns answer in boolean. Used by VAR4. Written by Katharina and Magnus.
+    def rightIndicatorLightIsOn(self):
+        pass
 
     def distanceToCar(self):
         pass
