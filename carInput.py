@@ -9,6 +9,11 @@ class carInput():
         textFromInteriorLightFile = file2.read()
         self.interiorLightStatus = textFromInteriorLightFile.split('\n')
 
+        file3 = open('distances.txr', 'r')
+        textFromDistances = file3.read()
+        self.distances = textFromDistances.split('\n')
+
+
     def getCurrentSpeed(self):
         while len(self.speeds) != 0:
             return self.speeds.pop(0)
@@ -45,7 +50,8 @@ class carInput():
         pass
 
     def distanceToCar(self):
-        pass
+        while len(self.distances) != 0:
+            return self.distances.pop(0)
 
     def carIsOn(self, carSignal):
         if carSignal == 1:
