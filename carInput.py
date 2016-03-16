@@ -15,8 +15,17 @@ class carInput():
         while len(self.speeds) != 0:
             return self.speeds.pop(0)
 
-    def isInteriorLightOn(a):
-        pass
+    def isInteriorLightOn(self):
+        while len(self.interiorLightStatus) != 0:
+            if self.interiorLightStatus == 1:
+                self.interiorLightStatus.pop(0)
+                return True
+            elif self.interiorLightStatus==0:
+                self.interiorLightStatus.pop(0)
+                return False
+            else:
+                self.interiorLightStatus.pop(0)
+                continue
 
     # print isInteriorLightOn(1)
 
