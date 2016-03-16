@@ -9,11 +9,6 @@ class interiorLightAnalyzer:
         else:
             return 0
 
-    def getInteriorLightStatus(self):
-        light = open('sensorForInteriorLightData.txt', 'r') #sensorForInteriorLightData is a fil with 0s and 1s
-        for line in light:
-            return int(line.strip())
-
         
     #the method returns flase if everything is OK (no notifications), if not, it returns false
     def interiorLightCheck(self, d): #take in value for light, door and speed (1 or 0)

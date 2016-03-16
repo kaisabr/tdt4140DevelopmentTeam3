@@ -9,6 +9,10 @@ class carInput():
         textFromInteriorLightFile = file2.read()
         self.interiorLightStatus = textFromInteriorLightFile.split('\n')
 
+        file3 =open('carDoors.txt','r') #1 if a door is open, 0 if not
+        textFromDoorFile = file3.read()
+        self.doorStatus = textFromDoorFile.split('\n')
+
     def getCurrentSpeed(self):
         while len(self.speeds) != 0:
             return self.speeds.pop(0)
@@ -20,7 +24,10 @@ class carInput():
             light = self.interiorLightStatus.pop(0)
             return light
 
-    # print isInteriorLightOn(1)
+    def isDoorOpen(self):
+        while len(self.doorStatus) != 0:
+            door = self.doorStatus.pop(0)
+            return door
 
 
     #Returns distance to object to the left side of the car. Method returns distance in meters. Used by VAR4. Written by Katharina and Magnus.
