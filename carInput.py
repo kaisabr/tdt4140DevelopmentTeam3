@@ -1,15 +1,18 @@
+import os
 class carInput():
-
+    current_folder_path, current_folder_name = os.path.split(os.getcwd())
     def __init__(self):
-        file1 = open('speeds.txt', 'r') #speed file with different speeds
+
+
+        file1 = open(self.current_folder_path+'\\'+self.current_folder_name+'\\speeds.txt', 'r') #speed file with different speeds
         textFromSpeedFile = file1.read()
         self.speeds = textFromSpeedFile.split('\n')
 
-        file2 = open('interiorLight.txt','r') #status file for intertior ligjt (0s and 1s)
+        file2 = open(self.current_folder_path+'\\'+self.current_folder_name+'\\interiorLight.txt','r') #status file for intertior ligjt (0s and 1s)
         textFromInteriorLightFile = file2.read()
         self.interiorLightStatus = textFromInteriorLightFile.split('\n')
 
-        file3 =open('carDoors.txt','r') #1 if a door is open, 0 if not
+        file3 =open(self.current_folder_path+'\\'+self.current_folder_name+'\\carDoors.txt','r') #1 if a door is open, 0 if not
         textFromDoorFile = file3.read()
         self.doorStatus = textFromDoorFile.split('\n')
 

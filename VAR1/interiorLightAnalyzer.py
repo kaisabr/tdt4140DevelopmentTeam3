@@ -11,9 +11,9 @@ class interiorLightAnalyzer:
 
         
     #the method returns flase if everything is OK (no notifications), if not, it returns false
-    def interiorLightCheck(self, d): #take in value for light, door and speed (1 or 0)
-        speed = carInput.getSpeed()
-        l = interiorLightAnalyzer.getInteriorLightStatus()
+    def interiorLightCheck(self): #take in value for light, door and speed (1 or 0)
+        speed = carInput.getCurrentSpeed()
+        light = self.car.isInteriorlightOn()
         while speed and l:
             s = interiorLightAnalyzer.convertSpeed(speed)
             if l == 1 and d == 0 and s == 0: #the only time it is ok for the light to be on
