@@ -1,39 +1,28 @@
-import carInput
+from carInput import carInput
+from siren import siren
 
 class blindSpotDetector():
 
+    def __init__(self):
+        self.car = carInput()
+
     def main(self):
-        if tooCloseToLeftSide():
+        if self.tooCloseToLeftSide():
             siren().triggeredByDistanceToSide()
-        if tooCloseToRightSide():
+        if self.tooCloseToRightSide():
             siren().triggeredByDistanceToSide()
 
     def tooCloseToLeftSide(self):
-        distance = distanceToLeftSide()
-        lightIsOn = leftIndicatorLightIsOn()
+        distance = self.car.distanceToLeftSide()
+        lightIsOn = self.car.leftIndicatorLightIsOn()
 
         if distance < 2.5 & lightIsOn:
             return True
 
     def tooCloseToRightSide(self):
-        distance = distanceToLeftSide()
-        lightIsOn = leftIndicatorLightIsOn()
+        distance = self.car.distanceToLeftSide()
+        lightIsOn = self.car.leftIndicatorLightIsOn()
 
         if distance < 2.5 & lightIsOn:
             return True;
 
-    #Returns distance to object to the left side of the car. Method returns distance in meters. Written by Katharina and Magnus.
-    def distanceToLeftSide(self):
-        pass
-
-    #Returns distance to object to the right side of the car. Method returns distance in meters. Written by Katharina and Magnus.
-    def distanceToRightSide(self):
-        pass
-
-    #Returns whether left indicator light is on. Method returns answer in boolean. Written by Katharina and Magnus.
-    def leftIndicatorLightIsOn(self):
-        pass
-
-    #Returns whether right indicator light is on. Method returns answer in boolean. Written by Katharina and Magnus.
-    def rightIndicatorLightIsOn(self):
-        pass

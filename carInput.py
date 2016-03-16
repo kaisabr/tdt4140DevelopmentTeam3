@@ -14,7 +14,21 @@ class carInput():
 
     # print isInteriorLightOn(1)
 
+    #Returns distance to object to the left side of the car. Method returns distance in meters. Used by VAR4. Written by Katharina and Magnus.
+    def distanceToLeftSide(self):
+        pass
 
+    #Returns distance to object to the right side of the car. Method returns distance in meters. Used by VAR4. Written by Katharina and Magnus.
+    def distanceToRightSide(self):
+        pass
+
+    #Returns whether left indicator light is on. Method returns answer in boolean. Used by VAR4. Written by Katharina and Magnus.
+    def leftIndicatorLightIsOn(self):
+        pass
+
+    #Returns whether right indicator light is on. Method returns answer in boolean. Used by VAR4. Written by Katharina and Magnus.
+    def rightIndicatorLightIsOn(self):
+        pass
 
     def getDistanceToCarAhead(self):
         pass
