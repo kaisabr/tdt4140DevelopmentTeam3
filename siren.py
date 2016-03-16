@@ -1,6 +1,8 @@
 class siren():
-    def triggeredByInteriorLight(self):
+    def __init__(self):
         pass
+    def triggeredByInteriorLight(self):
+        return "Check if your interior light is on"
 
     def triggeredByDistanceToCarInFront(self):
         return "Distance to car in front is too small."
