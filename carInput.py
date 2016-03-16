@@ -1,34 +1,24 @@
 class carInput():
 
     def __init__(self):
-        file1 = open('speeds.txt', 'r')
+        file1 = open('speeds.txt', 'r') #speed file with different speeds
         textFromSpeedFile = file1.read()
         self.speeds = textFromSpeedFile.split('\n')
 
-        file2 = open('interiorLight.txt','r')
+        file2 = open('interiorLight.txt','r') #status file for intertior ligjt (0s and 1s)
         textFromInteriorLightFile = file2.read()
         self.interiorLightStatus = textFromInteriorLightFile.split('\n')
-
-        file3 = open('distances', 'r')
-        textFromDistances = file3.read()
-        self.distances = textFromDistances.split('\n')
-
 
     def getCurrentSpeed(self):
         while len(self.speeds) != 0:
             return self.speeds.pop(0)
 
+    #Written by Andrea. Gives ut 0 if interior light is off, if on it gives 1
+    #Used in: VAR1 (interiorLightAnalyzer)
     def isInteriorLightOn(self):
         while len(self.interiorLightStatus) != 0:
-            if self.interiorLightStatus == 1:
-                self.interiorLightStatus.pop(0)
-                return True
-            elif self.interiorLightStatus==0:
-                self.interiorLightStatus.pop(0)
-                return False
-            else:
-                self.interiorLightStatus.pop(0)
-                continue
+            light = self.interiorLightStatus.pop(0)
+            return light
 
     # print isInteriorLightOn(1)
 
@@ -50,8 +40,7 @@ class carInput():
         pass
 
     def distanceToCar(self):
-        while len(self.distances) != 0:
-            return self.distances.pop(0)
+        pass
 
     def carIsOn(self, carSignal):
         if carSignal == 1:

@@ -4,7 +4,7 @@ car = carInput()
 speed = car.getCurrentSpeed()
 interiorlight = car.isInteriorLightOn()
 distance = car.distanceToCar()
-print(interiorlight)
+
 while speed:
     speed = car.getCurrentSpeed()
     if speed != None:
