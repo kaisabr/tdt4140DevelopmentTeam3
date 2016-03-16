@@ -1,15 +1,13 @@
 class carInput():
 
+    def __init__(self):
+        file = open('E:\speeds.txt', 'r')
+        textFromFile = file.read()
+        self.speeds = textFromFile.split('\n')
+
     def currentSpeed(self):
-        speeds = open('speedFile.txt','r')
-        for line in speeds:
-            if line.strip() == "\n":
-                pass
-            speed = int(line.strip())
-            if speed <0:
-                pass
-            else:
-                return speed
+        while len(self.speeds) != 0:
+            return self.speeds.pop(0)
 
     def isInteriorLightOn(a):
         pass
