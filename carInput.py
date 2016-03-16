@@ -5,20 +5,20 @@ class carInput():
         textFromFile = file.read()
         self.speeds = textFromFile.split('\n')
 
-    def currentSpeed(self):
+    def getCurrentSpeed(self):
         while len(self.speeds) != 0:
             return self.speeds.pop(0)
 
-    def isInteriorLightOn(a):
+    def getIsInteriorLightOn(a):
         pass
 
     # print isInteriorLightOn(1)
 
 
-    def distanceToCar(self):
+    def getDistanceToCarAhead(self):
         pass
 
-    def carIsOn(self, carSignal):
+    def isCarOn(self, carSignal):
         if carSignal == 1:
             return True
         else:
