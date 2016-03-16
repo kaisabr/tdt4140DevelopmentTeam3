@@ -30,9 +30,9 @@ class interiorLightAnalyzer():
             else:
                 sjekk= False #the light is off, no notification necessary
                 #siren = Siren.siren(False)
-            print(sjekk)
+
             if (sjekk == True and sjekk != None):
-                return (siren().triggeredByInteriorLight())
+                (siren().triggeredByInteriorLight())
 
             speed = self.car.getCurrentSpeed()
             light = self.car.isInteriorLightOn()
