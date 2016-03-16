@@ -15,7 +15,7 @@ class distanceAnalyzer():
 
     # Sirenen varsler dersom avstanden til bilen foran er for liten
     def calculateIfTooCloseToCar(self):
-        distance = self.car.getDistanceToCarAhead()
+        distance = self.car.getDistanceToCar()
         carIsOn = self.car.isCarOn()
         while carIsOn:
             if self.calculateOptimalDistance() > distance:
