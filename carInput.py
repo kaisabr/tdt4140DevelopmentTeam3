@@ -1,7 +1,7 @@
 class carInput():
 
     def __init__(self):
-        file = open('E:\speeds.txt', 'r')
+        file = open('speeds.txt', 'r')
         textFromFile = file.read()
         self.speeds = textFromFile.split('\n')
 
