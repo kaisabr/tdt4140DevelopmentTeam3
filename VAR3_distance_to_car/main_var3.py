@@ -3,7 +3,7 @@
 import siren
 import carInput
 
-class distanceToCar():
+class distanceAnalyzer():
 
     # Beregner optimal distanse.
     def calculateOptimalDistance(self):
