@@ -5,6 +5,10 @@ class carInput():
         textFromSpeedFile = file1.read()
         self.speeds = textFromSpeedFile.split('\n')
 
+        file2 = open('interiorLight.txt','r')
+        textFromInteriorLightFile = file2.read()
+        self.interiorLightStatus = textFromInteriorLightFile.split('\n')
+
 
 
     def getCurrentSpeed(self):
