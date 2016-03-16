@@ -1,20 +1,22 @@
 # Skrevet av Magnus og Aashild
 
-import siren
-import carInput
+from siren import siren
+from carInput import carInput
 
 class distanceToCar():
 
+    def __init__(self):
+        self.car = carInput()
+
     # Beregner optimal distanse.
     def calculateOptimalDistance(self):
-        speed = carInput.getSpeed()
+        speed = self.car.currentSpeed()
         return speed*3
 
     # Sirenen varsler dersom avstanden til bilen foran er for liten
     def calculateIfTooCloseToCar(self):
-        speed = carInput.getSpeed()
-        distance = carInput.distanceToCarAhead()
-        carIsOn = carInput.carIsOn()
+        distance = self.car.distanceToCar()
+        carIsOn = self.car.carIsOn()
         while carIsOn:
             if self.calculateOptimalDistance() > distance:
                 siren.triggeredByDistanceToCar()
