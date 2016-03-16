@@ -3,7 +3,7 @@
 from siren import siren
 from carInput import carInput
 
-class distanceToCar():
+class distanceAnalyzer():
 
     def __init__(self):
         self.car = carInput()
