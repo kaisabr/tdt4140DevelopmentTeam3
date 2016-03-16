@@ -9,7 +9,7 @@ class carInput():
         textFromInteriorLightFile = file2.read()
         self.interiorLightStatus = textFromInteriorLightFile.split('\n')
 
-        file3 = open('distances.txr', 'r')
+        file3 = open('distances', 'r')
         textFromDistances = file3.read()
         self.distances = textFromDistances.split('\n')
 

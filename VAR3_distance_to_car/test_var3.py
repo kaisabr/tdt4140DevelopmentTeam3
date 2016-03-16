@@ -8,13 +8,16 @@ from main_var3 import *
 class MyTest(unittest.TestCase):
 
     def test1(self):
-        self.assertTrue(distanceToCar().calculateOptimalDistance(10) > 0)
+        self.assertTrue(distanceToCar().calculateOptimalDistance() > 0)
     def test2(self):
-        self.assertEqual(distanceToCar().calculateOptimalDistance(30), 90)
+       # if(self.car.distanceToCar() = 40): Slik kan man visst ikke skrive
+            self.assertEqual(distanceToCar().calculateOptimalDistance(), 120)
     def test3(self):
-        self.assertTrue(distanceToCar().siren(True, 20, 50))
+        # Mangel
+        self.assertTrue(distanceToCar().calculateIfToCloseToCar())
     def test4(self):
-        self.assertFalse(distanceToCar().siren(True, 20, 70))
+       # if (self.car.getCurrentSpeed = 2):
+            self.assertFalse(distanceToCar().calculateIfToCloseToCar())
 
 if __name__ == '__main__':
     unittest.main()
