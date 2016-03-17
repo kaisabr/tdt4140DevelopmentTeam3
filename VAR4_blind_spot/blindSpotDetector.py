@@ -25,4 +25,3 @@ class blindSpotDetector():
 
         if distance < 2.5 & lightIsOn:
             return True;
-
