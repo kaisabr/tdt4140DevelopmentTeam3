@@ -1,3 +1,15 @@
+# ARNA, MAREN and MATHILDE
+
+"""
+USER STORY
+
+As a user
+I want to be notified when driving over 1.1*the speed limit
+So I can avoid getting fined
+
+"""
+
+
 from itertools import izip
 
 constant = 1.1
