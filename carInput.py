@@ -17,6 +17,22 @@ class carInput():
         textFromDoorFile = file3.read()
         self.doorStatus = textFromDoorFile.split('\n')
 
+        file4 =open(current_folder_path+'\\distanceToLeftSide.txt','r') #file with numbers for the distance to the left side of the car
+        textFromLeftSideFile = file4.read()
+        self.distanceToLeft = textFromLeftSideFile.split('\n')
+
+        file5 =open(current_folder_path+'\\distanceToRightSide.txt','r') #file with numbers for the distance to the right side of the car
+        textFromRightSideFile = file5.read()
+        self.distanceToRight = textFromRightSideFile.split('\n')
+
+        file6 =open(current_folder_path+'\\leftIndicatorLightIsOn.txt','r') #1 if left indicator light is on, 0 if not
+        textFromLeftIndicatorFile = file6.read()
+        self.leftIndicatorOn = textFromLeftIndicatorFile.split('\n')
+
+        file7 =open(current_folder_path+'\\rightIndicatorLightIsOn.txt','r') #1 if right indicator light is on, 0 if not
+        textFromRightIndicatorFile = file7.read()
+        self.rightIndicatorOn = textFromRightIndicatorFile.split('\n')
+
     def getCurrentSpeed(self):
         while len(self.speeds) != 0:
             return self.speeds.pop(0)
@@ -36,19 +52,23 @@ class carInput():
 
     #Returns distance to object to the left side of the car. Method returns distance in meters. Used by VAR4. Written by Katharina and Magnus.
     def distanceToLeftSide(self):
-        pass
+        while len(self.distanceToLeft) != 0:
+            return self.distanceToLeft.pop(0)
 
     #Returns distance to object to the right side of the car. Method returns distance in meters. Used by VAR4. Written by Katharina and Magnus.
     def distanceToRightSide(self):
-        pass
+        while len(self.distanceToRight) != 0:
+            return self.distanceToRight.pop(0)
 
     #Returns whether left indicator light is on. Method returns answer in boolean. Used by VAR4. Written by Katharina and Magnus.
     def leftIndicatorLightIsOn(self):
-        pass
+        while len(self.leftIndicatorOn) != 0:
+            return self.leftIndicatorOn.pop(0)
 
     #Returns whether right indicator light is on. Method returns answer in boolean. Used by VAR4. Written by Katharina and Magnus.
     def rightIndicatorLightIsOn(self):
-        pass
+        while len(self.rightIndicatorOn) != 0:
+            return self.rightIndicatorOn.pop(0)
 
     def distanceToCar(self):
         pass
