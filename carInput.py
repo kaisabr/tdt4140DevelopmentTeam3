@@ -63,12 +63,20 @@ class carInput():
     #Returns whether left indicator light is on. Method returns answer in boolean. Used by VAR4. Written by Katharina and Magnus.
     def leftIndicatorLightIsOn(self):
         while len(self.leftIndicatorOn) != 0:
-            return self.leftIndicatorOn.pop(0)
+            res = self.leftIndicatorOn.pop(0)
+            if res == 0:
+                return False
+            else:
+                return True
 
     #Returns whether right indicator light is on. Method returns answer in boolean. Used by VAR4. Written by Katharina and Magnus.
     def rightIndicatorLightIsOn(self):
         while len(self.rightIndicatorOn) != 0:
-            return self.rightIndicatorOn.pop(0)
+            res = self.rightIndicatorOn.pop(0)
+            if res == 0:
+                return False
+            else:
+                return True
 
     def distanceToCar(self):
         pass
