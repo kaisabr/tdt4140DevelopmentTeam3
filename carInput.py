@@ -33,6 +33,10 @@ class carInput():
         textFromRightIndicatorFile = file7.read()
         self.rightIndicatorOn = textFromRightIndicatorFile.split('\n')
 
+        file8 =open(current_folder_path+'\\carIsOn.txt','r') #1 if car is on, 0 if not
+        textFromCarIsOnFile = file8.read()
+        self.carIsOn = textFromCarIsOnFile.split('\n')
+
     def getCurrentSpeed(self):
         while len(self.speeds) != 0:
             return self.speeds.pop(0)
@@ -81,11 +85,13 @@ class carInput():
     def distanceToCar(self):
         pass
 
-    def carIsOn(self, carSignal):
-        if carSignal == 1:
-            return True
-        else:
-            return False
+    def carIsOn(self):
+        while len(self.carIsOn) != 0:
+            res = self.carIsOn.pop(0)
+            if res == 0:
+                return False
+            else:
+                return True
 
     # Should check if switch for indicator light is activated
     def indicatorLightSwitchedOn(self, lightSignal):

@@ -17,8 +17,6 @@ class distanceAnalyzer():
     def calculateIfTooCloseToCar(self):
         distance = self.car.distanceToCar()
         carIsOn = self.car.carIsOn()
-        while carIsOn:
+        if carIsOn:
             if self.calculateOptimalDistance() > distance:
                 siren.triggeredByDistanceToCar()
-            else:
-                continue
