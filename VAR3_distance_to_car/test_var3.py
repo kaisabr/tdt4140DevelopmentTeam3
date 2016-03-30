@@ -2,7 +2,7 @@
 
 
 import unittest
-from main_var3 import *
+from distanceAnalyzer import *
 
 
 class MyTest(unittest.TestCase):
