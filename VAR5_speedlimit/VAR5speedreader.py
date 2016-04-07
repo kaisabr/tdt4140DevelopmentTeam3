@@ -17,7 +17,7 @@ constant = 1.1
 class SpeedLimit():
 
     # Open file
-    def openFile(self, mySpeed, speedLimit):
+    def checkSpeed(self, mySpeed, speedLimit):
         with open(mySpeed, 'r') as speedInput, open(speedLimit, 'r') as speedLimitInput:
             # Iterating over the two files, one for speed and one for speed limit
             for speedLine, speedLimitLine in izip(speedInput, speedLimitInput):

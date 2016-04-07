@@ -5,7 +5,7 @@ USER STORY
 
 As a user
 I want to be notified if any lights does not work
-So I can change bulbs
+So I can change the bulbs
 
 """
 
