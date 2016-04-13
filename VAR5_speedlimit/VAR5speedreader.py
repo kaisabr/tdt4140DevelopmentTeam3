@@ -11,6 +11,7 @@ So I can avoid getting fined
 
 
 from itertools import izip
+import winsound
 
 constant = 1.1
 
@@ -43,7 +44,8 @@ class SpeedLimit():
 
     # warning sound
     def sound(self):
-        return "Pip"
+        # return "Pip"
+        winsound.PlaySound("SystemExit", winsound.SND_ALIAS)
 
 # sp = SpeedLimit()
 # print sp.openFile(speed, speedLimit)

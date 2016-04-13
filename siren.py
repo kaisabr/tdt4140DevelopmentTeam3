@@ -7,6 +7,7 @@ class siren():
         print "Check if your interior light is on"
 
     def triggeredByDistanceToCarInFront(self):
+
         print "Distance to car in front is too small."
 
     def triggeredByDistanceToCar(self):
