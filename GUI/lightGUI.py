@@ -4,7 +4,7 @@ import sys
 
 import lightView
 
-class MainDialog(QDialog, lightView.Ui_lightView):
+class MainLightView(QDialog, lightView.Ui_lightView):
 
     def __init__(self, parent=None):
         super(MainDialog, self).__init__(parent)

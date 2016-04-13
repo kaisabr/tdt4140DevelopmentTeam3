@@ -2,26 +2,26 @@
 
 # Form implementation generated from reading ui file 'distanceView.ui'
 #
-# Created: Wed Apr 13 01:47:38 2016
+# Created: Wed Apr 13 12:24:26 2016
 #      by: pyside-uic 0.2.15 running on PySide 1.2.4
 #
 # WARNING! All changes made in this file will be lost!
 
 from PySide import QtCore, QtGui
 
-class Ui_MainWindow(object):
-    def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(655, 391)
-        self.centralwidget = QtGui.QWidget(MainWindow)
-        self.centralwidget.setObjectName("centralwidget")
-        self.gridLayoutWidget = QtGui.QWidget(self.centralwidget)
+class Ui_mainWindowDist(object):
+    def setupUi(self, mainWindowDist):
+        mainWindowDist.setObjectName("mainWindowDist")
+        mainWindowDist.resize(655, 391)
+        self.mainWidgetDist = QtGui.QWidget(mainWindowDist)
+        self.mainWidgetDist.setObjectName("mainWidgetDist")
+        self.gridLayoutWidget = QtGui.QWidget(self.mainWidgetDist)
         self.gridLayoutWidget.setGeometry(QtCore.QRect(10, 10, 631, 341))
         self.gridLayoutWidget.setObjectName("gridLayoutWidget")
-        self.gridLayout = QtGui.QGridLayout(self.gridLayoutWidget)
-        self.gridLayout.setSpacing(0)
-        self.gridLayout.setContentsMargins(0, 0, 0, 0)
-        self.gridLayout.setObjectName("gridLayout")
+        self.distLayout = QtGui.QGridLayout(self.gridLayoutWidget)
+        self.distLayout.setSpacing(0)
+        self.distLayout.setContentsMargins(0, 0, 0, 0)
+        self.distLayout.setObjectName("distLayout")
         self.distance_label = QtGui.QLabel(self.gridLayoutWidget)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Preferred, QtGui.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
@@ -38,7 +38,7 @@ class Ui_MainWindow(object):
         self.distance_label.setFrameShape(QtGui.QFrame.Panel)
         self.distance_label.setAlignment(QtCore.Qt.AlignCenter)
         self.distance_label.setObjectName("distance_label")
-        self.gridLayout.addWidget(self.distance_label, 1, 0, 1, 1)
+        self.distLayout.addWidget(self.distance_label, 1, 0, 1, 1)
         self.speed_label = QtGui.QLabel(self.gridLayoutWidget)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Preferred, QtGui.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
@@ -55,7 +55,7 @@ class Ui_MainWindow(object):
         self.speed_label.setFrameShape(QtGui.QFrame.Panel)
         self.speed_label.setAlignment(QtCore.Qt.AlignCenter)
         self.speed_label.setObjectName("speed_label")
-        self.gridLayout.addWidget(self.speed_label, 1, 1, 1, 1)
+        self.distLayout.addWidget(self.speed_label, 1, 1, 1, 1)
         self.label_disttitle = QtGui.QLabel(self.gridLayoutWidget)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Preferred, QtGui.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -70,7 +70,7 @@ class Ui_MainWindow(object):
         self.label_disttitle.setFont(font)
         self.label_disttitle.setAlignment(QtCore.Qt.AlignCenter)
         self.label_disttitle.setObjectName("label_disttitle")
-        self.gridLayout.addWidget(self.label_disttitle, 0, 0, 1, 1)
+        self.distLayout.addWidget(self.label_disttitle, 0, 0, 1, 1)
         self.label_spdtitle = QtGui.QLabel(self.gridLayoutWidget)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Preferred, QtGui.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -85,23 +85,20 @@ class Ui_MainWindow(object):
         self.label_spdtitle.setFont(font)
         self.label_spdtitle.setAlignment(QtCore.Qt.AlignCenter)
         self.label_spdtitle.setObjectName("label_spdtitle")
-        self.gridLayout.addWidget(self.label_spdtitle, 0, 1, 1, 1)
-        MainWindow.setCentralWidget(self.centralwidget)
-        self.menubar = QtGui.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 655, 21))
-        self.menubar.setObjectName("menubar")
-        MainWindow.setMenuBar(self.menubar)
-        self.statusbar = QtGui.QStatusBar(MainWindow)
-        self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
+        self.distLayout.addWidget(self.label_spdtitle, 0, 1, 1, 1)
+        mainWindowDist.setCentralWidget(self.mainWidgetDist)
+        self.distMenu = QtGui.QMenuBar(mainWindowDist)
+        self.distMenu.setGeometry(QtCore.QRect(0, 0, 655, 21))
+        self.distMenu.setObjectName("distMenu")
+        mainWindowDist.setMenuBar(self.distMenu)
 
-        self.retranslateUi(MainWindow)
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        self.retranslateUi(mainWindowDist)
+        QtCore.QMetaObject.connectSlotsByName(mainWindowDist)
 
-    def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QtGui.QApplication.translate("MainWindow", "MainWindow", None, QtGui.QApplication.UnicodeUTF8))
-        self.distance_label.setText(QtGui.QApplication.translate("MainWindow", "OK", None, QtGui.QApplication.UnicodeUTF8))
-        self.speed_label.setText(QtGui.QApplication.translate("MainWindow", "OK", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_disttitle.setText(QtGui.QApplication.translate("MainWindow", "DISTANCE", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_spdtitle.setText(QtGui.QApplication.translate("MainWindow", "SPEED", None, QtGui.QApplication.UnicodeUTF8))
+    def retranslateUi(self, mainWindowDist):
+        mainWindowDist.setWindowTitle(QtGui.QApplication.translate("mainWindowDist", "MainWindow", None, QtGui.QApplication.UnicodeUTF8))
+        self.distance_label.setText(QtGui.QApplication.translate("mainWindowDist", "OK", None, QtGui.QApplication.UnicodeUTF8))
+        self.speed_label.setText(QtGui.QApplication.translate("mainWindowDist", "OK", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_disttitle.setText(QtGui.QApplication.translate("mainWindowDist", "DISTANCE", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_spdtitle.setText(QtGui.QApplication.translate("mainWindowDist", "SPEED", None, QtGui.QApplication.UnicodeUTF8))
 

@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralwidget">
+  <widget class="QWidget" name="mainWidgetLight">
    <widget class="QTableView" name="tableView">
     <property name="geometry">
      <rect>
@@ -33,7 +33,7 @@
       <height>341</height>
      </rect>
     </property>
-    <layout class="QGridLayout" name="gridLayout">
+    <layout class="QGridLayout" name="lightLayout">
      <property name="spacing">
       <number>0</number>
      </property>
@@ -152,7 +152,6 @@
    </widget>
    <addaction name="menuFile"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>

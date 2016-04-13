@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'lightView.ui'
 #
-# Created: Wed Apr 13 01:47:04 2016
+# Created: Wed Apr 13 12:24:03 2016
 #      by: pyside-uic 0.2.15 running on PySide 1.2.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -13,18 +13,18 @@ class Ui_lightView(object):
     def setupUi(self, lightView):
         lightView.setObjectName("lightView")
         lightView.resize(654, 393)
-        self.centralwidget = QtGui.QWidget(lightView)
-        self.centralwidget.setObjectName("centralwidget")
-        self.tableView = QtGui.QTableView(self.centralwidget)
+        self.mainWidgetLight = QtGui.QWidget(lightView)
+        self.mainWidgetLight.setObjectName("mainWidgetLight")
+        self.tableView = QtGui.QTableView(self.mainWidgetLight)
         self.tableView.setGeometry(QtCore.QRect(5, 1, 641, 361))
         self.tableView.setObjectName("tableView")
-        self.gridLayoutWidget = QtGui.QWidget(self.centralwidget)
+        self.gridLayoutWidget = QtGui.QWidget(self.mainWidgetLight)
         self.gridLayoutWidget.setGeometry(QtCore.QRect(9, 9, 631, 341))
         self.gridLayoutWidget.setObjectName("gridLayoutWidget")
-        self.gridLayout = QtGui.QGridLayout(self.gridLayoutWidget)
-        self.gridLayout.setSpacing(0)
-        self.gridLayout.setContentsMargins(0, 0, 0, 0)
-        self.gridLayout.setObjectName("gridLayout")
+        self.lightLayout = QtGui.QGridLayout(self.gridLayoutWidget)
+        self.lightLayout.setSpacing(0)
+        self.lightLayout.setContentsMargins(0, 0, 0, 0)
+        self.lightLayout.setObjectName("lightLayout")
         self.front_label = QtGui.QLabel(self.gridLayoutWidget)
         font = QtGui.QFont()
         font.setFamily("Garamond")
@@ -36,7 +36,7 @@ class Ui_lightView(object):
         self.front_label.setFrameShape(QtGui.QFrame.Box)
         self.front_label.setAlignment(QtCore.Qt.AlignCenter)
         self.front_label.setObjectName("front_label")
-        self.gridLayout.addWidget(self.front_label, 0, 0, 1, 1)
+        self.lightLayout.addWidget(self.front_label, 0, 0, 1, 1)
         self.interior_label = QtGui.QLabel(self.gridLayoutWidget)
         font = QtGui.QFont()
         font.setFamily("Garamond")
@@ -48,7 +48,7 @@ class Ui_lightView(object):
         self.interior_label.setFrameShape(QtGui.QFrame.Box)
         self.interior_label.setAlignment(QtCore.Qt.AlignCenter)
         self.interior_label.setObjectName("interior_label")
-        self.gridLayout.addWidget(self.interior_label, 0, 1, 1, 1)
+        self.lightLayout.addWidget(self.interior_label, 0, 1, 1, 1)
         self.back_label = QtGui.QLabel(self.gridLayoutWidget)
         font = QtGui.QFont()
         font.setFamily("Garamond")
@@ -60,7 +60,7 @@ class Ui_lightView(object):
         self.back_label.setFrameShape(QtGui.QFrame.Box)
         self.back_label.setAlignment(QtCore.Qt.AlignCenter)
         self.back_label.setObjectName("back_label")
-        self.gridLayout.addWidget(self.back_label, 1, 0, 1, 1)
+        self.lightLayout.addWidget(self.back_label, 1, 0, 1, 1)
         self.reg_label = QtGui.QLabel(self.gridLayoutWidget)
         font = QtGui.QFont()
         font.setFamily("Garamond")
@@ -72,17 +72,14 @@ class Ui_lightView(object):
         self.reg_label.setFrameShape(QtGui.QFrame.Box)
         self.reg_label.setAlignment(QtCore.Qt.AlignCenter)
         self.reg_label.setObjectName("reg_label")
-        self.gridLayout.addWidget(self.reg_label, 1, 1, 1, 1)
-        lightView.setCentralWidget(self.centralwidget)
+        self.lightLayout.addWidget(self.reg_label, 1, 1, 1, 1)
+        lightView.setCentralWidget(self.mainWidgetLight)
         self.menubar = QtGui.QMenuBar(lightView)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 654, 21))
         self.menubar.setObjectName("menubar")
         self.menuFile = QtGui.QMenu(self.menubar)
         self.menuFile.setObjectName("menuFile")
         lightView.setMenuBar(self.menubar)
-        self.statusbar = QtGui.QStatusBar(lightView)
-        self.statusbar.setObjectName("statusbar")
-        lightView.setStatusBar(self.statusbar)
         self.menubar.addAction(self.menuFile.menuAction())
 
         self.retranslateUi(lightView)
