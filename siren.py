@@ -1,5 +1,3 @@
-import winsound
-
 class siren():
 
     def __init__(self):
@@ -16,6 +14,5 @@ class siren():
         pass
 
     def triggeredByDistanceToSide(self):
-        winsound.PlaySound("SystemExit", winsound.SND_ALIAS)
         print "There is an object in your blind spot."
 
