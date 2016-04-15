@@ -37,6 +37,18 @@ class carInput():
         textFromCarIsOnFile = file8.read()
         self.carIsOn = textFromCarIsOnFile.split('\n')
 
+        file9 =open(current_folder_path+'\\indicatorLightSwitchedOn.txt','r') #1 if indicator light switch is on, 0 if not
+        textIndicatorLightSwitchedOnFile = file9.read()
+        self.indicatorLightSwitchedOn = textIndicatorLightSwitchedOnFile.split('\n')
+
+        file10 =open(current_folder_path+'\\brakePushed.txt','r') #1 if car is brake is pushed, 0 if not
+        textFromBrakePushedFile = file10.read()
+        self.brakePushed = textFromBrakePushedFile.split('\n')
+
+        file11 =open(current_folder_path+'\\isLightOff.txt','r') #1 if car is light is on, 0 if not. Arna and Maren should clarify what type of light this method actually checks.
+        textFromIsLightOffFile = file11.read()
+        self.isLightOff = textFromIsLightOffFile.split('\n')
+
     def getCurrentSpeed(self):
         while len(self.speeds) != 0:
             return self.speeds.pop(0)
@@ -52,7 +64,6 @@ class carInput():
         while len(self.doorStatus) != 0:
             door = self.doorStatus.pop(0)
             return door
-
 
     #Returns distance to object to the left side of the car. Method returns distance in meters. Used by VAR4. Written by Katharina and Magnus.
     def distanceToLeftSide(self):
@@ -94,23 +105,29 @@ class carInput():
                 return True
 
     # Should check if switch for indicator light is activated
-    def indicatorLightSwitchedOn(self, lightSignal):
-        if lightSignal == 1:
-            return True
-        else:
-            return False
+    def indicatorLightSwitchedOn(self):
+        while len(self.indicatorLightSwitchedOn) != 0:
+            res = self.indicatorLightSwitchedOn.pop(0)
+            if res == 0:
+                return False
+            else:
+                return True
 
     # Should check if brakes are used
-    def brakePushed(self, brakeSignal):
-        if brakeSignal == 1:
-            return True
-        else:
-            return False
+    def brakePushed(self):
+        while len(self.brakePushed) != 0:
+            res = self.brakePushed.pop(0)
+            if res == 0:
+                return False
+            else:
+                return True
 
     # The method checks if the ligthsensor recieves input. Returns False if everything is OK.
     # sensorInput recieves either a 0, if the light is not on, and 1 if the light is on.
-    def isLightOff(self, sensorInput):
-        if sensorInput == 0:
-            return True
-        else:
-            return False
+    def isLightOff(self):
+        while len(self.isLightOff) != 0:
+            res = self.isLightOff.pop(0)
+            if res == 0:
+                return False
+            else:
+                return True

@@ -17,8 +17,9 @@ constant = 1.1
 
 class SpeedLimit():
 
-    def __init__(self, car):
+    def __init__(self, car, siren):
         self.car = car
+        self.siren = siren
 
     # Open file
     def checkSpeed(self, mySpeed, speedLimit):

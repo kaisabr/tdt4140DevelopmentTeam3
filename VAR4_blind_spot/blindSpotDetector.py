@@ -2,14 +2,15 @@ from siren import siren
 
 class blindSpotDetector():
 
-    def __init__(self, car):
+    def __init__(self, car, siren):
         self.car = car
+        self.siren = siren
 
     def main(self):
         if self.tooCloseToLeftSide():
-            siren().triggeredByDistanceToSide()
+            self.siren.triggeredByVAR4()
         elif self.tooCloseToRightSide():
-            siren().triggeredByDistanceToSide()
+            self.siren.triggeredByVAR4()
 
     def tooCloseToLeftSide(self):
         distance = self.car.distanceToLeftSide()

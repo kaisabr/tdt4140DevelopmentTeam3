@@ -4,8 +4,9 @@ from siren import siren
 
 class distanceAnalyzer():
 
-    def __init__(self, car):
+    def __init__(self, car, siren):
         self.car = car
+        self.siren = siren
 
     # Beregner optimal distanse.
     def calculateOptimalDistance(self):
@@ -18,4 +19,4 @@ class distanceAnalyzer():
         carOn = self.car.carIsOn()
         if carOn:
             if self.calculateOptimalDistance() > distance:
-                siren.triggeredByDistanceToCarInFront()
+                self.siren.triggeredByVAR3()
