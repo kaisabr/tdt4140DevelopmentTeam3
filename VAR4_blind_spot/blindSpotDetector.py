@@ -1,10 +1,9 @@
-from carInput import carInput
 from siren import siren
 
 class blindSpotDetector():
 
-    def __init__(self):
-        self.car = carInput()
+    def __init__(self, car):
+        self.car = car
 
     def main(self):
         if self.tooCloseToLeftSide():

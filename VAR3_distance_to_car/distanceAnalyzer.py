@@ -1,12 +1,11 @@
 # Skrevet av Magnus og Aashild
 
 from siren import siren
-from carInput import carInput
 
 class distanceAnalyzer():
 
-    def __init__(self):
-        self.car = carInput()
+    def __init__(self, car):
+        self.car = car
 
     # Beregner optimal distanse.
     def calculateOptimalDistance(self):

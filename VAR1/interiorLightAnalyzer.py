@@ -3,6 +3,11 @@ from carInput import *
 from siren import*
 
 class interiorLightAnalyzer():
+
+    def __init__(self, car):
+        self.car = car
+
+
     car = carInput()
     #Method returns the speeds in 0s and 1s
     def convertSpeed(self,speed):

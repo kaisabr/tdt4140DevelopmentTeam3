@@ -16,6 +16,9 @@ constant = 1.1
 
 class SpeedLimit():
 
+    def __init__(self, car):
+        self.car = car
+
     # Open file
     def openFile(self, mySpeed, speedLimit):
         with open(mySpeed, 'r') as speedInput, open(speedLimit, 'r') as speedLimitInput:
