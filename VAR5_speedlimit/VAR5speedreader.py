@@ -15,7 +15,7 @@ from siren import *
 
 constant = 1.1
 
-class SpeedLimit():
+class SpeedLimit:
 
     def __init__(self, car, siren):
         self.car = car
