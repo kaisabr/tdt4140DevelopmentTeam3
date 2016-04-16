@@ -1,57 +1,55 @@
 import os
+import sys
 class carInput():
 
     def __init__(self):
 
         current_folder_path, current_folder_name = os.path.split(os.getcwd())
+        sys.path.append(current_folder_path + "\*")
 
-        file1 = open(current_folder_path+'\\speeds.txt', 'r') #speed file with different speeds
+        file1 = open(current_folder_path+'\\'+current_folder_name+'\\speeds.txt', 'r') #speed file with different speeds
         textFromSpeedFile = file1.read()
         self.speeds = textFromSpeedFile.split('\n')
 
-        file2 = open(current_folder_path+'\\interiorLight.txt','r') #status file for intertior ligjt (0s and 1s)
+        file2 = open(current_folder_path+'\\'+current_folder_name+'\\interiorLight.txt','r') #status file for intertior ligjt (0s and 1s)
         textFromInteriorLightFile = file2.read()
         self.interiorLightStatus = textFromInteriorLightFile.split('\n')
 
-        file3 = open(current_folder_path+'\\carDoors.txt','r') #1 if a door is open, 0 if not
+        file3 =open(current_folder_path+'\\'+current_folder_name+'\\carDoors.txt','r') #1 if a door is open, 0 if not
         textFromDoorFile = file3.read()
         self.doorStatus = textFromDoorFile.split('\n')
 
-        file4 = open(current_folder_path+'\\distanceToLeftSide.txt','r') #file with numbers for the distance to the left side of the car
+        file4 =open(current_folder_path+'\\'+current_folder_name+'\\distanceToLeftSide.txt','r') #file with numbers for the distance to the left side of the car
         textFromLeftSideFile = file4.read()
         self.distanceToLeft = textFromLeftSideFile.split('\n')
 
-        file5 = open(current_folder_path+'\\distanceToRightSide.txt','r') #file with numbers for the distance to the right side of the car
+        file5 =open(current_folder_path+'\\'+current_folder_name+'\\distanceToRightSide.txt','r') #file with numbers for the distance to the right side of the car
         textFromRightSideFile = file5.read()
         self.distanceToRight = textFromRightSideFile.split('\n')
 
-        file6 = open(current_folder_path+'\\leftIndicatorLightIsOn.txt','r') #1 if left indicator light is on, 0 if not
+        file6 =open(current_folder_path+'\\'+current_folder_name+'\\leftIndicatorLightIsOn.txt','r') #1 if left indicator light is on, 0 if not
         textFromLeftIndicatorFile = file6.read()
         self.leftIndicatorOn = textFromLeftIndicatorFile.split('\n')
 
-        file7 = open(current_folder_path+'\\rightIndicatorLightIsOn.txt','r') #1 if right indicator light is on, 0 if not
+        file7 =open(current_folder_path+'\\'+current_folder_name+'\\rightIndicatorLightIsOn.txt','r') #1 if right indicator light is on, 0 if not
         textFromRightIndicatorFile = file7.read()
         self.rightIndicatorOn = textFromRightIndicatorFile.split('\n')
 
-        file8 = open(current_folder_path+'\\carIsOn.txt','r') #1 if car is on, 0 if not
+        file8 =open(current_folder_path+'\\'+current_folder_name+'\\carIsOn.txt','r') #1 if car is on, 0 if not
         textFromCarIsOnFile = file8.read()
-        self.carIsOn = textFromCarIsOnFile.split('\n')
+        self.carIsOnVariable = textFromCarIsOnFile.split('\n')
 
-        file9 = open(current_folder_path+'\\indicatorLightSwitchedOn.txt','r') #1 if indicator light switch is on, 0 if not
+        file9 =open(current_folder_path+'\\'+current_folder_name+'\\indicatorLightSwitchedOn.txt','r') #1 if indicator light switch is on, 0 if not
         textIndicatorLightSwitchedOnFile = file9.read()
-        self.indicatorLightSwitchedOn = textIndicatorLightSwitchedOnFile.split('\n')
+        self.indicatorLightSwitchedOnVariable = textIndicatorLightSwitchedOnFile.split('\n')
 
-        file10 = open(current_folder_path+'\\brakePushed.txt','r') #1 if car is brake is pushed, 0 if not
+        file10 =open(current_folder_path+'\\'+current_folder_name+'\\brakePushed.txt','r') #1 if car is brake is pushed, 0 if not
         textFromBrakePushedFile = file10.read()
-        self.brakePushed = textFromBrakePushedFile.split('\n')
+        self.brakePushedVariable = textFromBrakePushedFile.split('\n')
 
-        file11 = open(current_folder_path+'\\isLightOff.txt','r') #1 if car is light is on, 0 if not. Arna and Maren should clarify what type of light this method actually checks.
+        file11 =open(current_folder_path+'\\'+current_folder_name+'\\isLightOff.txt','r') #1 if car is light is on, 0 if not. Arna and Maren should clarify what type of light this method actually checks.
         textFromIsLightOffFile = file11.read()
-        self.isLightOff = textFromIsLightOffFile.split('\n')
-
-        file12 = open(current_folder_path+'\\isLightOff.txt','r')
-        textFromIsLightOffFile = file11.read()
-        self.isLightOff = textFromIsLightOffFile.split('\n')
+        self.isLightOffVariable = textFromIsLightOffFile.split('\n')
 
     def getCurrentSpeed(self):
         while len(self.speeds) != 0:
@@ -101,8 +99,8 @@ class carInput():
         pass
 
     def carIsOn(self):
-        while len(self.carIsOn) != 0:
-            res = self.carIsOn.pop(0)
+        while len(self.carIsOnVariable) != 0:
+            res = self.carIsOnVariable.pop(0)
             if res == 0:
                 return False
             else:
@@ -110,8 +108,8 @@ class carInput():
 
     # Should check if switch for indicator light is activated
     def indicatorLightSwitchedOn(self):
-        while len(self.indicatorLightSwitchedOn) != 0:
-            res = self.indicatorLightSwitchedOn.pop(0)
+        while len(self.indicatorLightSwitchedOnVariable) != 0:
+            res = self.indicatorLightSwitchedOnVariable.pop(0)
             if res == 0:
                 return False
             else:
@@ -119,8 +117,8 @@ class carInput():
 
     # Should check if brakes are used
     def brakePushed(self):
-        while len(self.brakePushed) != 0:
-            res = self.brakePushed.pop(0)
+        while len(self.brakePushedVariable) != 0:
+            res = self.brakePushedVariable.pop(0)
             if res == 0:
                 return False
             else:
@@ -129,8 +127,8 @@ class carInput():
     # The method checks if the ligthsensor recieves input. Returns False if everything is OK.
     # sensorInput recieves either a 0, if the light is not on, and 1 if the light is on.
     def isLightOff(self):
-        while len(self.isLightOff) != 0:
-            res = self.isLightOff.pop(0)
+        while len(self.isLightOffVariable) != 0:
+            res = self.isLightOffVariable.pop(0)
             if res == 0:
                 return False
             else:
