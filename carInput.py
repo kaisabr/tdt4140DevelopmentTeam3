@@ -49,10 +49,6 @@ class carInput():
         textFromIsLightOffFile = file11.read()
         self.isLightOff = textFromIsLightOffFile.split('\n')
 
-        file12 = open(current_folder_path+'\\isLightOff.txt','r')
-        textFromIsLightOffFile = file11.read()
-        self.isLightOff = textFromIsLightOffFile.split('\n')
-
     def getCurrentSpeed(self):
         while len(self.speeds) != 0:
             return self.speeds.pop(0)
