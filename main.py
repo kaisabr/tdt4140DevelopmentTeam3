@@ -45,7 +45,9 @@ class main():
                 if input == '6':
                     loopContinues = False
 
+            #When this loop exits, the program shuts down.
 
+        #By changing the values of the booleans on the siren-object, the warning systems for the given function is toggled on and off.
         def toggle(self, i):
             i = int(i)
             if i == 1:
@@ -59,12 +61,6 @@ class main():
             if i == 5:
                 self.siren.VAR5on = not self.siren.VAR5on
 
-        def turnOffSystem(self):
-            main.VAR1on = False
-            main.VAR2on = False
-            main.VAR3on = False
-            main.VAR4on = False
-            main.VAR5on = False
 
 class runVAR1(Thread):
 
