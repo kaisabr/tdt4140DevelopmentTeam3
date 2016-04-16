@@ -1,3 +1,5 @@
+import winsound
+
 class siren():
 
     def __init__(self):
@@ -33,5 +35,6 @@ class siren():
     #Method is used by VAR5
     def triggeredByVAR5(self):
         if self.VAR5on:
-            print "There is an object in your blind spot."
+            winsound.PlaySound("SystemExit", winsound.SND_ALIAS)
+            print "Driving to fast."
 
