@@ -9,7 +9,7 @@ class interiorLightAnalyzer():
         self.siren = siren
 
     #Method returns the speeds in 0s and 1s
-    def convertSpeed(self,speed):
+    def convertSpeed(self, speed):
         if speed != 0:
             return 1
         else:
