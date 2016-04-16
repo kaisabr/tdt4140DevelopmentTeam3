@@ -13,39 +13,43 @@ class carInput():
         textFromInteriorLightFile = file2.read()
         self.interiorLightStatus = textFromInteriorLightFile.split('\n')
 
-        file3 =open(current_folder_path+'\\carDoors.txt','r') #1 if a door is open, 0 if not
+        file3 = open(current_folder_path+'\\carDoors.txt','r') #1 if a door is open, 0 if not
         textFromDoorFile = file3.read()
         self.doorStatus = textFromDoorFile.split('\n')
 
-        file4 =open(current_folder_path+'\\distanceToLeftSide.txt','r') #file with numbers for the distance to the left side of the car
+        file4 = open(current_folder_path+'\\distanceToLeftSide.txt','r') #file with numbers for the distance to the left side of the car
         textFromLeftSideFile = file4.read()
         self.distanceToLeft = textFromLeftSideFile.split('\n')
 
-        file5 =open(current_folder_path+'\\distanceToRightSide.txt','r') #file with numbers for the distance to the right side of the car
+        file5 = open(current_folder_path+'\\distanceToRightSide.txt','r') #file with numbers for the distance to the right side of the car
         textFromRightSideFile = file5.read()
         self.distanceToRight = textFromRightSideFile.split('\n')
 
-        file6 =open(current_folder_path+'\\leftIndicatorLightIsOn.txt','r') #1 if left indicator light is on, 0 if not
+        file6 = open(current_folder_path+'\\leftIndicatorLightIsOn.txt','r') #1 if left indicator light is on, 0 if not
         textFromLeftIndicatorFile = file6.read()
         self.leftIndicatorOn = textFromLeftIndicatorFile.split('\n')
 
-        file7 =open(current_folder_path+'\\rightIndicatorLightIsOn.txt','r') #1 if right indicator light is on, 0 if not
+        file7 = open(current_folder_path+'\\rightIndicatorLightIsOn.txt','r') #1 if right indicator light is on, 0 if not
         textFromRightIndicatorFile = file7.read()
         self.rightIndicatorOn = textFromRightIndicatorFile.split('\n')
 
-        file8 =open(current_folder_path+'\\carIsOn.txt','r') #1 if car is on, 0 if not
+        file8 = open(current_folder_path+'\\carIsOn.txt','r') #1 if car is on, 0 if not
         textFromCarIsOnFile = file8.read()
         self.carIsOn = textFromCarIsOnFile.split('\n')
 
-        file9 =open(current_folder_path+'\\indicatorLightSwitchedOn.txt','r') #1 if indicator light switch is on, 0 if not
+        file9 = open(current_folder_path+'\\indicatorLightSwitchedOn.txt','r') #1 if indicator light switch is on, 0 if not
         textIndicatorLightSwitchedOnFile = file9.read()
         self.indicatorLightSwitchedOn = textIndicatorLightSwitchedOnFile.split('\n')
 
-        file10 =open(current_folder_path+'\\brakePushed.txt','r') #1 if car is brake is pushed, 0 if not
+        file10 = open(current_folder_path+'\\brakePushed.txt','r') #1 if car is brake is pushed, 0 if not
         textFromBrakePushedFile = file10.read()
         self.brakePushed = textFromBrakePushedFile.split('\n')
 
-        file11 =open(current_folder_path+'\\isLightOff.txt','r') #1 if car is light is on, 0 if not. Arna and Maren should clarify what type of light this method actually checks.
+        file11 = open(current_folder_path+'\\isLightOff.txt','r') #1 if car is light is on, 0 if not. Arna and Maren should clarify what type of light this method actually checks.
+        textFromIsLightOffFile = file11.read()
+        self.isLightOff = textFromIsLightOffFile.split('\n')
+
+        file12 = open(current_folder_path+'\\isLightOff.txt','r')
         textFromIsLightOffFile = file11.read()
         self.isLightOff = textFromIsLightOffFile.split('\n')
 
