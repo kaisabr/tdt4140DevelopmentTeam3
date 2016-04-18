@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:\Users\Mathilde Theisen\Documents\NTNU\TDT4141 Programvareutvikling\sounds.ui'
+# Form implementation generated from reading ui file 'C:\Users\Mathilde Theisen\PycharmProjects\tdt4140DevelopmentTeam3\GUI\sounds.ui'
 #
-# Created: Sat Apr 09 15:55:38 2016
+# Created: Mon Apr 18 20:38:18 2016
 #      by: pyside-uic 0.2.15 running on PySide 1.2.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -115,10 +115,10 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QtGui.QApplication.translate("MainWindow", "Code Red - Sound", None, QtGui.QApplication.UnicodeUTF8))
-        self.soundLabel.setText(QtGui.QApplication.translate("MainWindow", "Sounds", None, QtGui.QApplication.UnicodeUTF8))
+        self.soundLabel.setText(QtGui.QApplication.translate("MainWindow", "Sounds ", None, QtGui.QApplication.UnicodeUTF8))
         self.allSoundsLabel.setText(QtGui.QApplication.translate("MainWindow", "All sounds", None, QtGui.QApplication.UnicodeUTF8))
-        self.interiorLightLabel.setText(QtGui.QApplication.translate("MainWindow", "Interior light", None, QtGui.QApplication.UnicodeUTF8))
-        self.toCloseLabel.setText(QtGui.QApplication.translate("MainWindow", "Driving to close to the car in front", None, QtGui.QApplication.UnicodeUTF8))
+        self.interiorLightLabel.setText(QtGui.QApplication.translate("MainWindow", "Lights", None, QtGui.QApplication.UnicodeUTF8))
+        self.toCloseLabel.setText(QtGui.QApplication.translate("MainWindow", "Distance ", None, QtGui.QApplication.UnicodeUTF8))
         self.blindZoneLabel.setText(QtGui.QApplication.translate("MainWindow", "Blindzone", None, QtGui.QApplication.UnicodeUTF8))
         self.drivingToFastLabel.setText(QtGui.QApplication.translate("MainWindow", "Driving to fast", None, QtGui.QApplication.UnicodeUTF8))
         self.menuLight_mode.setTitle(QtGui.QApplication.translate("MainWindow", "Light mode", None, QtGui.QApplication.UnicodeUTF8))
