@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>647</width>
+    <height>435</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Code Red - Sound</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_5">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>50</number>
+      </property>
+      <item alignment="Qt::AlignHCenter">
+       <widget class="QLabel" name="soundLabel">
+        <property name="font">
+         <font>
+          <family>Garamond</family>
+          <pointsize>24</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Sounds </string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <property name="spacing">
+         <number>8</number>
+        </property>
+        <property name="leftMargin">
+         <number>50</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="allSoundsLabel">
+          <property name="font">
+           <font>
+            <family>Garamond</family>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>All sounds</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="Phonon::VolumeSlider" name="allSoundsSlider"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="interiorLightLabel">
+          <property name="font">
+           <font>
+            <family>Garamond</family>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Lights</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="Phonon::VolumeSlider" name="interiorLightSlider"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="toCloseLabel">
+          <property name="font">
+           <font>
+            <family>Garamond</family>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Distance </string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="Phonon::VolumeSlider" name="drivingToCloseSlider"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="blindZoneLabel">
+          <property name="font">
+           <font>
+            <family>Garamond</family>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Blindzone</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="Phonon::VolumeSlider" name="blindZoneSlider"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="drivingToFastLabel">
+          <property name="font">
+           <font>
+            <family>Garamond</family>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Driving to fast</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="Phonon::VolumeSlider" name="drivingToFastSlider"/>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>647</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuLight_mode">
+    <property name="title">
+     <string>Light mode</string>
+    </property>
+    <addaction name="actionSpeed_and_distance"/>
+    <addaction name="actionRecent_messages"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <widget class="QMenu" name="menuSound">
+    <property name="title">
+     <string>Sound</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+   </widget>
+   <addaction name="menuLight_mode"/>
+   <addaction name="menuSound"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionSpeed_and_distance">
+   <property name="text">
+    <string>Speed and distance</string>
+   </property>
+  </action>
+  <action name="actionRecent_messages">
+   <property name="text">
+    <string>Recent messages</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>Phonon::VolumeSlider</class>
+   <extends>QWidget</extends>
+   <header location="global">phonon/volumeslider.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
