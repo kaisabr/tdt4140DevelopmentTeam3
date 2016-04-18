@@ -102,3 +102,4 @@ class Ui_mainWindowDist(object):
         self.label_disttitle.setText(QtGui.QApplication.translate("mainWindowDist", "DISTANCE", None, QtGui.QApplication.UnicodeUTF8))
         self.label_spdtitle.setText(QtGui.QApplication.translate("mainWindowDist", "SPEED", None, QtGui.QApplication.UnicodeUTF8))
 
+
