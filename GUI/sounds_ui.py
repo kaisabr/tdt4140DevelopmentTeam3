@@ -8,7 +8,7 @@
 # WARNING! All changes made in this file will be lost!
 
 from PySide import QtCore, QtGui
-from PyQt4.phonon import Phonon
+from PyQt4.phonon import *
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
