@@ -7,7 +7,7 @@ class carInput():
         current_folder_path, current_folder_name = os.path.split(os.getcwd())
         sys.path.append(current_folder_path + "\*")
 
-        file1 = open(current_folder_path+'\\'+current_folder_name+'\\speeds.txt', 'r') #speed file with different speeds
+        file1 = open(current_folder_path+'\\'+current_folder_name+'\\speeds.txt', 'r') #speed file with different speeds   Mathilde tok vekk: '+current_folder_name+'\\
         textFromSpeedFile = file1.read()
         self.speeds = textFromSpeedFile.split('\n')
 
