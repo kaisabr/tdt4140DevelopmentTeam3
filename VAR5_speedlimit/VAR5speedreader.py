@@ -40,7 +40,7 @@ class SpeedLimit:
                     if x <= (y*constant):
                         return True
                     else:
-                        self.siren.triggeredByVAR15()
+                        self.siren().triggeredByVAR5()
                         return False
         # closing files
         speedInput.close()
