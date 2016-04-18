@@ -42,3 +42,4 @@ class siren():
             winsound.PlaySound('D:\\1.wav',winsound.SND_FILENAME)
             print "Driving to fast."
 
+# må ha noe å commite
