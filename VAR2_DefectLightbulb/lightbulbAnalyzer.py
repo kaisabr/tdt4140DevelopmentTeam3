@@ -10,6 +10,7 @@ So I can change bulbs
 """
 
 from siren import *
+from carInput import *
 
 class lightBulbAnalyzer:
 
@@ -19,6 +20,7 @@ class lightBulbAnalyzer:
 
 # Checks if the front light sensor gets input when the car is on. Returns a message to check light if it is not.
     def isFrontLightOff(self):
+
         defectFront = self.car.isLightOff()
         if defectFront == True and self.car.carIsOn():
             self.siren.triggeredByVAR2("Front ligth is not on. Make sure it is working")
@@ -47,7 +49,7 @@ class lightBulbAnalyzer:
                 else:
                     on += 1
             if off == 5:
-                self.siren("Please check your indicator light. No input to light sensor for 5 seconds")
+                self.siren.triggeredByVAR2("Please check your indicator light. No input to light sensor for 5 seconds")
 
 # Checks if brake light is on when car is on and brakes and brakes are pushed. Warning message given if it is not.
     def isBrakeLightOn(self):

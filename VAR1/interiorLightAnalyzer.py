@@ -14,8 +14,6 @@ class interiorLightAnalyzer():
             return 1
         else:
             return 0
-
-
         
     #the method returns flase if everything is OK (no notifications), if not, it returns false
     def interiorLightCheck(self): #take in value for light, door and speed (1 or 0)
