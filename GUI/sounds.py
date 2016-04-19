@@ -1,4 +1,5 @@
 from PySide import QtGui
+from PySide.QtGui import *
 
 # import the UI from the generated file
 from sounds_ui import Ui_MainWindow
@@ -17,7 +18,11 @@ class MyMainWindow(QtGui.QMainWindow, Ui_MainWindow):
         self.label.setText(self.label.text() + 'a')
 
 if __name__ == '__main__':
-    app = QtGui.QApplication([])
-    win = MyMainWindow()
-    win.show()
+    import sys
+    app = QtGui.QApplication(sys.argv)
+    Dialog = QtGui.QMainWindow()
+    win = Ui_MainWindow()
+    win.setupUi(Dialog)
+    Dialog.show()
     app.exec_()
+
