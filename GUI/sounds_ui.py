@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'C:\Users\Mathilde Theisen\PycharmProjects\tdt4140DevelopmentTeam3\GUI\sounds.ui'
 #
-# Created: Wed Apr 20 12:48:09 2016
+# Created: Wed Apr 20 13:41:14 2016
 #      by: pyside-uic 0.2.15 running on PySide 1.2.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -12,7 +12,7 @@ from PySide import QtCore, QtGui
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(647, 435)
+        MainWindow.resize(655, 391)
         self.centralwidget = QtGui.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout_2 = QtGui.QVBoxLayout(self.centralwidget)
@@ -21,16 +21,25 @@ class Ui_MainWindow(object):
         self.verticalLayout_5.setContentsMargins(0, -1, 50, -1)
         self.verticalLayout_5.setObjectName("verticalLayout_5")
         self.soundLabel = QtGui.QLabel(self.centralwidget)
+        self.soundLabel.setEnabled(True)
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.soundLabel.sizePolicy().hasHeightForWidth())
+        self.soundLabel.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setFamily("Garamond")
         font.setPointSize(24)
         font.setWeight(75)
         font.setBold(True)
         self.soundLabel.setFont(font)
+        self.soundLabel.setAlignment(QtCore.Qt.AlignCenter)
+        self.soundLabel.setMargin(0)
+        self.soundLabel.setIndent(-1)
         self.soundLabel.setObjectName("soundLabel")
         self.verticalLayout_5.addWidget(self.soundLabel)
         self.verticalLayout = QtGui.QVBoxLayout()
-        self.verticalLayout.setSpacing(8)
+        self.verticalLayout.setSpacing(4)
         self.verticalLayout.setContentsMargins(50, 0, 0, 0)
         self.verticalLayout.setObjectName("verticalLayout")
         self.allSoundsLabel = QtGui.QLabel(self.centralwidget)
@@ -67,6 +76,7 @@ class Ui_MainWindow(object):
         self.toCloseLabel.setObjectName("toCloseLabel")
         self.verticalLayout.addWidget(self.toCloseLabel)
         self.drivingToCloseSlider = phonon.Phonon.VolumeSlider(self.centralwidget)
+        self.drivingToCloseSlider.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.drivingToCloseSlider.setObjectName("drivingToCloseSlider")
         self.verticalLayout.addWidget(self.drivingToCloseSlider)
         self.blindZoneLabel = QtGui.QLabel(self.centralwidget)
@@ -97,7 +107,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_2.addLayout(self.verticalLayout_5)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtGui.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 647, 21))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 655, 21))
         self.menubar.setObjectName("menubar")
         self.menuLight_mode = QtGui.QMenu(self.menubar)
         self.menuLight_mode.setObjectName("menuLight_mode")

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>647</width>
-    <height>435</height>
+    <width>655</width>
+    <height>391</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -23,8 +23,17 @@
       <property name="rightMargin">
        <number>50</number>
       </property>
-      <item alignment="Qt::AlignHCenter">
+      <item>
        <widget class="QLabel" name="soundLabel">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="font">
          <font>
           <family>Garamond</family>
@@ -36,12 +45,21 @@
         <property name="text">
          <string>SOUNDS</string>
         </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="margin">
+         <number>0</number>
+        </property>
+        <property name="indent">
+         <number>-1</number>
+        </property>
        </widget>
       </item>
       <item>
        <layout class="QVBoxLayout" name="verticalLayout">
         <property name="spacing">
-         <number>8</number>
+         <number>4</number>
         </property>
         <property name="leftMargin">
          <number>50</number>
@@ -107,7 +125,11 @@
          </widget>
         </item>
         <item>
-         <widget class="Phonon::VolumeSlider" name="drivingToCloseSlider"/>
+         <widget class="Phonon::VolumeSlider" name="drivingToCloseSlider">
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+         </widget>
         </item>
         <item>
          <widget class="QLabel" name="blindZoneLabel">
@@ -156,7 +178,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>647</width>
+     <width>655</width>
      <height>21</height>
     </rect>
    </property>
