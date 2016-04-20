@@ -51,6 +51,14 @@ class carInput():
         textFromIsLightOffFile = file11.read()
         self.isLightOffVariable = textFromIsLightOffFile.split('\n')
 
+        file12 =open(current_folder_path+'\\'+current_folder_name+'\\distanceToCarFront.txt','r') # File contains numbers representing distance to car in front. Measured in meters.
+        textFromDistanceToCarFront = file12.read()
+        self.distanceToCarFrontVariable = textFromDistanceToCarFront.split('\n')
+
+        file13 =open(current_folder_path+'\\'+current_folder_name+'\\speedLimits.txt','r') # File contains numbers representing speed limits. Speeds are measured in km/h.
+        textFromSpeedLimits = file13.read()
+        self.speedLimitsVariable = textFromSpeedLimits.split('\n')
+
     def getCurrentSpeed(self):
         while len(self.speeds) != 0:
             return self.speeds.pop(0)
@@ -96,7 +104,8 @@ class carInput():
                 return True
 
     def distanceToCar(self):
-        pass
+        while len(self.distanceToCarFrontVariable) != 0:
+            return self.distanceToCarFrontVariable.pop(0)
 
     def carIsOn(self):
         while len(self.carIsOnVariable) != 0:
@@ -133,3 +142,7 @@ class carInput():
                 return False
             else:
                 return True
+
+    def getSpeedLimit(self):
+        while len(self.speedLimitsVariable) != 0:
+            return self.speedLimitsVariable.pop(0)

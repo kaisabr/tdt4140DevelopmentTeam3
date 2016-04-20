@@ -22,29 +22,13 @@ class SpeedLimit:
         self.siren = siren
 
     # Open file
-    def checkSpeed(self, mySpeed, speedLimit):
-        with open(mySpeed, 'r') as speedInput, open(speedLimit, 'r') as speedLimitInput:
-            # Iterating over the two files, one for speed and one for speed limit
-            for speedLine, speedLimitLine in izip(speedInput, speedLimitInput):
-                # converting to int
-                speedLine, speedLimitLine = int(speedLine.split("\t")[0]), int(speedLimitLine.split("\t")[0])
+    def checkSpeed(self):
+        x = float(self.car.getCurrentSpeed())
+        y = float(self.car.getSpeedLimit())
 
-                # Check if there is no empty line
-                if (speedLine == '' or speedLimitLine == ''):
-                    return None
-                else:
-                    x = speedLine
-                    y = speedLimitLine
-
-                    # checking speed
-                    if x <= (y*constant):
-                        return True
-                    else:
-                        self.siren().triggeredByVAR5()
-                        return False
-        # closing files
-        speedInput.close()
-        speedLimitInput.close()
-
-# sp = SpeedLimit()
-# print sp.openFile(speed, speedLimit)
+        # checking speed
+        if x <= (y*constant):
+            return True
+        else:
+            self.siren.triggeredByVAR5()
+            return False

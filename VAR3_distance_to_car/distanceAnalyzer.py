@@ -11,6 +11,8 @@ class distanceAnalyzer():
     # Beregner optimal distanse.
     def calculateOptimalDistance(self):
         speed = self.car.getCurrentSpeed()
+        speed = float(speed)
+        speed = speed/3.6
         return speed*3
 
     # Sirenen varsler dersom avstanden til bilen foran er for liten
