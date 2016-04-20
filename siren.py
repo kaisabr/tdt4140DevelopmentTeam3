@@ -40,4 +40,4 @@ class siren():
     def triggeredByVAR5(self):
         if self.VAR5on:
             winsound.PlaySound("SystemExit", winsound.SND_ALIAS)
-            print "Driving to fast."
+            print "Driving too fast."
