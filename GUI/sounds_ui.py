@@ -2,13 +2,12 @@
 
 # Form implementation generated from reading ui file 'C:\Users\Mathilde Theisen\PycharmProjects\tdt4140DevelopmentTeam3\GUI\sounds.ui'
 #
-# Created: Mon Apr 18 20:38:18 2016
+# Created: Wed Apr 20 12:48:09 2016
 #      by: pyside-uic 0.2.15 running on PySide 1.2.4
 #
 # WARNING! All changes made in this file will be lost!
 
 from PySide import QtCore, QtGui
-from PySide import phonon
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -25,6 +24,8 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setFamily("Garamond")
         font.setPointSize(24)
+        font.setWeight(75)
+        font.setBold(True)
         self.soundLabel.setFont(font)
         self.soundLabel.setObjectName("soundLabel")
         self.verticalLayout_5.addWidget(self.soundLabel)
@@ -36,6 +37,8 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setFamily("Garamond")
         font.setPointSize(16)
+        font.setWeight(75)
+        font.setBold(True)
         self.allSoundsLabel.setFont(font)
         self.allSoundsLabel.setObjectName("allSoundsLabel")
         self.verticalLayout.addWidget(self.allSoundsLabel)
@@ -46,6 +49,8 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setFamily("Garamond")
         font.setPointSize(16)
+        font.setWeight(75)
+        font.setBold(True)
         self.interiorLightLabel.setFont(font)
         self.interiorLightLabel.setObjectName("interiorLightLabel")
         self.verticalLayout.addWidget(self.interiorLightLabel)
@@ -56,6 +61,8 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setFamily("Garamond")
         font.setPointSize(16)
+        font.setWeight(75)
+        font.setBold(True)
         self.toCloseLabel.setFont(font)
         self.toCloseLabel.setObjectName("toCloseLabel")
         self.verticalLayout.addWidget(self.toCloseLabel)
@@ -66,6 +73,8 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setFamily("Garamond")
         font.setPointSize(16)
+        font.setWeight(75)
+        font.setBold(True)
         self.blindZoneLabel.setFont(font)
         self.blindZoneLabel.setObjectName("blindZoneLabel")
         self.verticalLayout.addWidget(self.blindZoneLabel)
@@ -76,6 +85,8 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setFamily("Garamond")
         font.setPointSize(16)
+        font.setWeight(75)
+        font.setBold(True)
         self.drivingToFastLabel.setFont(font)
         self.drivingToFastLabel.setObjectName("drivingToFastLabel")
         self.verticalLayout.addWidget(self.drivingToFastLabel)
@@ -104,7 +115,10 @@ class Ui_MainWindow(object):
         self.actionRecent_messages.setObjectName("actionRecent_messages")
         self.actionQuit = QtGui.QAction(MainWindow)
         self.actionQuit.setObjectName("actionQuit")
+        self.actionLight_mode = QtGui.QAction(MainWindow)
+        self.actionLight_mode.setObjectName("actionLight_mode")
         self.menuLight_mode.addAction(self.actionSpeed_and_distance)
+        self.menuLight_mode.addAction(self.actionLight_mode)
         self.menuLight_mode.addAction(self.actionRecent_messages)
         self.menuLight_mode.addAction(self.actionQuit)
         self.menubar.addAction(self.menuLight_mode.menuAction())
@@ -115,19 +129,22 @@ class Ui_MainWindow(object):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QtGui.QApplication.translate("MainWindow", "Code Red - Sound", None, QtGui.QApplication.UnicodeUTF8))
-        self.soundLabel.setText(QtGui.QApplication.translate("MainWindow", "Sounds ", None, QtGui.QApplication.UnicodeUTF8))
+        MainWindow.setWindowTitle(QtGui.QApplication.translate("MainWindow", "Code Red - Sounds", None, QtGui.QApplication.UnicodeUTF8))
+        self.soundLabel.setText(QtGui.QApplication.translate("MainWindow", "SOUNDS", None, QtGui.QApplication.UnicodeUTF8))
         self.allSoundsLabel.setText(QtGui.QApplication.translate("MainWindow", "All sounds", None, QtGui.QApplication.UnicodeUTF8))
         self.interiorLightLabel.setText(QtGui.QApplication.translate("MainWindow", "Lights", None, QtGui.QApplication.UnicodeUTF8))
         self.toCloseLabel.setText(QtGui.QApplication.translate("MainWindow", "Distance ", None, QtGui.QApplication.UnicodeUTF8))
         self.blindZoneLabel.setText(QtGui.QApplication.translate("MainWindow", "Blindzone", None, QtGui.QApplication.UnicodeUTF8))
         self.drivingToFastLabel.setText(QtGui.QApplication.translate("MainWindow", "Driving to fast", None, QtGui.QApplication.UnicodeUTF8))
-        self.menuLight_mode.setTitle(QtGui.QApplication.translate("MainWindow", "Light mode", None, QtGui.QApplication.UnicodeUTF8))
+        self.menuLight_mode.setTitle(QtGui.QApplication.translate("MainWindow", "View", None, QtGui.QApplication.UnicodeUTF8))
         self.menuSound.setTitle(QtGui.QApplication.translate("MainWindow", "Sound", None, QtGui.QApplication.UnicodeUTF8))
         self.menuHelp.setTitle(QtGui.QApplication.translate("MainWindow", "Help", None, QtGui.QApplication.UnicodeUTF8))
         self.actionSpeed_and_distance.setText(QtGui.QApplication.translate("MainWindow", "Speed and distance", None, QtGui.QApplication.UnicodeUTF8))
         self.actionRecent_messages.setText(QtGui.QApplication.translate("MainWindow", "Recent messages", None, QtGui.QApplication.UnicodeUTF8))
         self.actionQuit.setText(QtGui.QApplication.translate("MainWindow", "Quit", None, QtGui.QApplication.UnicodeUTF8))
+        self.actionLight_mode.setText(QtGui.QApplication.translate("MainWindow", "Light mode", None, QtGui.QApplication.UnicodeUTF8))
+
+from PySide import phonon
 
 if __name__ == "__main__":
     import sys

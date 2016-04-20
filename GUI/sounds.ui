@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Code Red - Sound</string>
+   <string>Code Red - Sounds</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -29,10 +29,12 @@
          <font>
           <family>Garamond</family>
           <pointsize>24</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
          </font>
         </property>
         <property name="text">
-         <string>Sounds </string>
+         <string>SOUNDS</string>
         </property>
        </widget>
       </item>
@@ -59,6 +61,8 @@
            <font>
             <family>Garamond</family>
             <pointsize>16</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
            </font>
           </property>
           <property name="text">
@@ -75,6 +79,8 @@
            <font>
             <family>Garamond</family>
             <pointsize>16</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
            </font>
           </property>
           <property name="text">
@@ -91,6 +97,8 @@
            <font>
             <family>Garamond</family>
             <pointsize>16</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
            </font>
           </property>
           <property name="text">
@@ -107,6 +115,8 @@
            <font>
             <family>Garamond</family>
             <pointsize>16</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
            </font>
           </property>
           <property name="text">
@@ -123,6 +133,8 @@
            <font>
             <family>Garamond</family>
             <pointsize>16</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
            </font>
           </property>
           <property name="text">
@@ -150,9 +162,10 @@
    </property>
    <widget class="QMenu" name="menuLight_mode">
     <property name="title">
-     <string>Light mode</string>
+     <string>View</string>
     </property>
     <addaction name="actionSpeed_and_distance"/>
+    <addaction name="actionLight_mode"/>
     <addaction name="actionRecent_messages"/>
     <addaction name="actionQuit"/>
    </widget>
@@ -184,6 +197,11 @@
   <action name="actionQuit">
    <property name="text">
     <string>Quit</string>
+   </property>
+  </action>
+  <action name="actionLight_mode">
+   <property name="text">
+    <string>Light mode</string>
    </property>
   </action>
  </widget>
