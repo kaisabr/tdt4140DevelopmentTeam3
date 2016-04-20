@@ -39,5 +39,5 @@ class siren():
     #Method is used by VAR5
     def triggeredByVAR5(self):
         if self.VAR5on:
-            winsound.PlaySound('bum.wav',winsound.SND_FILENAME)
-            print "Driving too fast."
+            winsound.PlaySound("SystemExit", winsound.SND_ALIAS)
+            print "Driving to fast."
