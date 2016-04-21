@@ -1,4 +1,7 @@
 import winsound
+import pyglet
+import pkgutil
+import time
 
 class siren():
 
@@ -15,29 +18,33 @@ class siren():
     #Method is used by VAR1
     def triggeredByVAR1(self):
         if self.VAR1on:
-            winsound.PlaySound("SystemExit", winsound.SND_ALIAS)
             print "Check if your interior light is on"
 
     #Method is used by VAR2
     def triggeredByVAR2(self, text):
         if self.VAR2on:
-            winsound.PlaySound("SystemExit", winsound.SND_ALIAS)
+            # winsound.PlaySound("SystemExit", winsound.SND_ALIAS)
             print text
 
     #Method is used by VAR3
     def triggeredByVAR3(self):
         if self.VAR3on:
-            winsound.PlaySound("SystemExit", winsound.SND_ALIAS)
             print "Distance to car in front is too small."
 
     #Method is used by VAR4
     def triggeredByVAR4(self):
         if self.VAR4on:
-            winsound.PlaySound("SystemExit", winsound.SND_ALIAS)
+            music = pyglet.resource.media("bum.wav")
+            music.play()
             print "There is an object in your blind spot."
+            pyglet.app.run()
+            time.sleep(5)
+
 
     #Method is used by VAR5
     def triggeredByVAR5(self):
         if self.VAR5on:
-            winsound.PlaySound("SystemExit", winsound.SND_ALIAS)
-            print "Driving too fast."
+            music = pyglet.resource.media(pkgutil.get_data("Lydfiler", "bum.wav"))
+            music.play()
+            pyglet.app.run()
+            print "Driving to fast."
