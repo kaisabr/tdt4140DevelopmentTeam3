@@ -18,18 +18,26 @@ class siren():
     #Method is used by VAR1
     def triggeredByVAR1(self):
         if self.VAR1on:
+            music = pyglet.resource.media("bum.wav")
+            music.play()
             print "Check if your interior light is on"
+            time.sleep(2)
 
     #Method is used by VAR2
     def triggeredByVAR2(self, text):
         if self.VAR2on:
-            # winsound.PlaySound("SystemExit", winsound.SND_ALIAS)
+            music = pyglet.resource.media("bum.wav")
+            music.play()
             print text
+            time.sleep(2)
 
     #Method is used by VAR3
     def triggeredByVAR3(self):
         if self.VAR3on:
+            music = pyglet.resource.media("bum.wav")
+            music.play()
             print "Distance to car in front is too small."
+            time.sleep(2)
 
     #Method is used by VAR4
     def triggeredByVAR4(self):
@@ -37,14 +45,13 @@ class siren():
             music = pyglet.resource.media("bum.wav")
             music.play()
             print "There is an object in your blind spot."
-            pyglet.app.run()
-            time.sleep(5)
+            time.sleep(2)
 
 
     #Method is used by VAR5
     def triggeredByVAR5(self):
         if self.VAR5on:
-            music = pyglet.resource.media(pkgutil.get_data("Lydfiler", "bum.wav"))
+            music = pyglet.resource.media("bum.wav")
             music.play()
-            pyglet.app.run()
             print "Driving to fast."
+            time.sleep(2)
