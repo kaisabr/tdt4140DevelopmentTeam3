@@ -1,7 +1,6 @@
-import winsound
 import pyglet
-import pkgutil
 import time
+from GUI import sounds
 
 class siren():
 
@@ -53,5 +52,6 @@ class siren():
         if self.VAR5on:
             music = pyglet.resource.media("bum.wav")
             music.play()
+            sounds.__init__()
             print "Driving to fast."
             time.sleep(2)
