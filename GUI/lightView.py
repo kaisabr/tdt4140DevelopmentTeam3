@@ -10,6 +10,7 @@
 from PySide import QtCore, QtGui
 
 class Ui_lightView(object):
+    # setup
     def setupUi(self, lightView):
         lightView.setObjectName("lightView")
         lightView.resize(654, 393)

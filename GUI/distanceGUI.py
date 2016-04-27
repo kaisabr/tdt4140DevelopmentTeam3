@@ -9,15 +9,16 @@ from distanceView import Ui_mainWindowDist
 
 class MainDistanceView(QWidget, distanceView.Ui_mainWindowDist):
 
-   def __init__(self, parent=None):
+    def __init__(self, parent=None):
        QWidget.__init__(self, parent)
 
 
 
-   def DistanceSignalChanged(self):
+    def DistanceSignalChanged(self):
        self.changedState.emit()
 
-   def changeLabelColor(self):
+    # Change the color and text if the driver drives too fast
+    def changeLabelColor(self):
        self.QLabel.setText("Too fast")
        self.QLabel.setStyleSheet("{background-color: red}")
 
