@@ -81,6 +81,8 @@ class main():
             if i == 'e':
                 self.VAR5on = not self.VAR5on
 
+
+
 class runVAR1(Thread):
 
     def __init__(self, var1, mainobject):
@@ -95,7 +97,6 @@ class runVAR1(Thread):
             if self.mainobject.VAR1on and self.mainobject.on:
                 self.var1.interiorLightCheck()
                 time.sleep(5)
-
 
 
 class runVAR2(Thread):
@@ -118,7 +119,6 @@ class runVAR2(Thread):
                 time.sleep(10)
 
 
-
 class runVAR3(Thread):
 
     def __init__(self, var3, mainobject):
@@ -132,8 +132,7 @@ class runVAR3(Thread):
         while True:
             if self.mainobject.VAR3on and self.mainobject.on:
                 self.var3.calculateIfTooCloseToCar()
-                time.sleep(0.5)
-
+                time.sleep(7)
 
 
 class runVAR4(Thread):
@@ -149,8 +148,7 @@ class runVAR4(Thread):
         while True:
             if self.mainobject.VAR4on and self.mainobject.on:
                 self.var4.main()
-                time.sleep(0.5)
-
+                time.sleep(3)
 
 
 class runVAR5(Thread):
@@ -167,5 +165,5 @@ class runVAR5(Thread):
         while True:
             if self.mainobject.VAR5on and self.mainobject.on:
                 self.var5.checkSpeed()
-                time.sleep(1)
+                time.sleep(13)
 
