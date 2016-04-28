@@ -10,6 +10,7 @@
 from PySide import QtCore, QtGui
 
 class Ui_MainWindow(object):
+    #Setup
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(655, 391)

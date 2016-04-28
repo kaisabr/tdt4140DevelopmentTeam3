@@ -13,11 +13,13 @@ class MainLightView(QWidget, Ui_lightView):
    def __init__(self, parent=None):
         QWidget.__init__(self, parent)
 
+        # Rename the labels used in the user interface
         bLabel = Ui_lightView.back_label
         fLabel = Ui_lightView.front_label
         iLabel = self.interior_label
         rLabel = self.reg_label
 
+        # Change color if frontlight off
         if(VAR2_DefectLightbulb.lightbulbAnalyzer.lightBulbAnalyzer.isFrontLightOff(self, frontLightSensor=0, carSignal=1)):
             fLabel.setStyleSheet("#front_label{background-color: red;}")
             fLabel.setText("Check light")

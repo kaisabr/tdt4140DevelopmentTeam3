@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Code Red - Light mode</string>
   </property>
   <widget class="QWidget" name="mainWidgetLight">
    <widget class="QTableView" name="tableView">
@@ -147,11 +147,47 @@
    </property>
    <widget class="QMenu" name="menuFile">
     <property name="title">
-     <string>File</string>
+     <string>View</string>
+    </property>
+    <addaction name="actionSpeed_and_distance"/>
+    <addaction name="actionLight_mode"/>
+    <addaction name="actionRecent_messages"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <widget class="QMenu" name="menuSound">
+    <property name="title">
+     <string>Sound</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
     </property>
    </widget>
    <addaction name="menuFile"/>
+   <addaction name="menuSound"/>
+   <addaction name="menuHelp"/>
   </widget>
+  <action name="actionLight_mode">
+   <property name="text">
+    <string>Light mode</string>
+   </property>
+  </action>
+  <action name="actionSpeed_and_distance">
+   <property name="text">
+    <string>Speed and distance</string>
+   </property>
+  </action>
+  <action name="actionRecent_messages">
+   <property name="text">
+    <string>Recent messages</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>

@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'C:\Users\Mathilde Theisen\PycharmProjects\tdt4140DevelopmentTeam3\GUI\blindzone.ui'
 #
-# Created: Wed Apr 20 13:40:30 2016
+# Created: Thu Apr 21 16:29:32 2016
 #      by: pyside-uic 0.2.15 running on PySide 1.2.4
 #
 # WARNING! All changes made in this file will be lost!

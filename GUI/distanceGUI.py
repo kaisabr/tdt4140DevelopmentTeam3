@@ -14,6 +14,7 @@ class MainDistanceView(QWidget, distanceView.Ui_mainWindowDist):
 
 
 
+
    def DistanceSignalChanged(self):
        self.changedState.emit()
 

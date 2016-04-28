@@ -12,6 +12,7 @@ So I can avoid getting fined
 
 from itertools import izip
 from siren import *
+from carInput import *
 
 constant = 1.1
 

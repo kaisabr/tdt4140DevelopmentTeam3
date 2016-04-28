@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'lightView.ui'
+# Form implementation generated from reading ui file 'C:\Qt\lightView.ui'
 #
-# Created: Wed Apr 13 12:24:03 2016
+# Created: Thu Apr 21 15:39:41 2016
 #      by: pyside-uic 0.2.15 running on PySide 1.2.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -10,6 +10,7 @@
 from PySide import QtCore, QtGui
 
 class Ui_lightView(object):
+    # setup
     def setupUi(self, lightView):
         lightView.setObjectName("lightView")
         lightView.resize(654, 393)
@@ -79,17 +80,51 @@ class Ui_lightView(object):
         self.menubar.setObjectName("menubar")
         self.menuFile = QtGui.QMenu(self.menubar)
         self.menuFile.setObjectName("menuFile")
+        self.menuSound = QtGui.QMenu(self.menubar)
+        self.menuSound.setObjectName("menuSound")
+        self.menuHelp = QtGui.QMenu(self.menubar)
+        self.menuHelp.setObjectName("menuHelp")
         lightView.setMenuBar(self.menubar)
+        self.actionLight_mode = QtGui.QAction(lightView)
+        self.actionLight_mode.setObjectName("actionLight_mode")
+        self.actionSpeed_and_distance = QtGui.QAction(lightView)
+        self.actionSpeed_and_distance.setObjectName("actionSpeed_and_distance")
+        self.actionRecent_messages = QtGui.QAction(lightView)
+        self.actionRecent_messages.setObjectName("actionRecent_messages")
+        self.actionQuit = QtGui.QAction(lightView)
+        self.actionQuit.setObjectName("actionQuit")
+        self.menuFile.addAction(self.actionSpeed_and_distance)
+        self.menuFile.addAction(self.actionLight_mode)
+        self.menuFile.addAction(self.actionRecent_messages)
+        self.menuFile.addAction(self.actionQuit)
         self.menubar.addAction(self.menuFile.menuAction())
+        self.menubar.addAction(self.menuSound.menuAction())
+        self.menubar.addAction(self.menuHelp.menuAction())
 
         self.retranslateUi(lightView)
         QtCore.QMetaObject.connectSlotsByName(lightView)
 
     def retranslateUi(self, lightView):
-        lightView.setWindowTitle(QtGui.QApplication.translate("lightView", "MainWindow", None, QtGui.QApplication.UnicodeUTF8))
+        lightView.setWindowTitle(QtGui.QApplication.translate("lightView", "Code Red - Light mode", None, QtGui.QApplication.UnicodeUTF8))
         self.front_label.setText(QtGui.QApplication.translate("lightView", "FRONT LIGHTS", None, QtGui.QApplication.UnicodeUTF8))
         self.interior_label.setText(QtGui.QApplication.translate("lightView", "INTERIOR LIGHT", None, QtGui.QApplication.UnicodeUTF8))
         self.back_label.setText(QtGui.QApplication.translate("lightView", "BACK LIGHTS", None, QtGui.QApplication.UnicodeUTF8))
         self.reg_label.setText(QtGui.QApplication.translate("lightView", "REGISTRATION PLATE", None, QtGui.QApplication.UnicodeUTF8))
-        self.menuFile.setTitle(QtGui.QApplication.translate("lightView", "File", None, QtGui.QApplication.UnicodeUTF8))
+        self.menuFile.setTitle(QtGui.QApplication.translate("lightView", "View", None, QtGui.QApplication.UnicodeUTF8))
+        self.menuSound.setTitle(QtGui.QApplication.translate("lightView", "Sound", None, QtGui.QApplication.UnicodeUTF8))
+        self.menuHelp.setTitle(QtGui.QApplication.translate("lightView", "Help", None, QtGui.QApplication.UnicodeUTF8))
+        self.actionLight_mode.setText(QtGui.QApplication.translate("lightView", "Light mode", None, QtGui.QApplication.UnicodeUTF8))
+        self.actionSpeed_and_distance.setText(QtGui.QApplication.translate("lightView", "Speed and distance", None, QtGui.QApplication.UnicodeUTF8))
+        self.actionRecent_messages.setText(QtGui.QApplication.translate("lightView", "Recent messages", None, QtGui.QApplication.UnicodeUTF8))
+        self.actionQuit.setText(QtGui.QApplication.translate("lightView", "Quit", None, QtGui.QApplication.UnicodeUTF8))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtGui.QApplication(sys.argv)
+    lightView = QtGui.QMainWindow()
+    ui = Ui_lightView()
+    ui.setupUi(lightView)
+    lightView.show()
+    sys.exit(app.exec_())
 
